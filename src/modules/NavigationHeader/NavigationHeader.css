@@ -11,3 +11,8 @@
   align-items: center;
   font-size: 1.2rem;
 }
+@media screen and (max-width: 960px) {
+  .navigationHeader {
+    justify-content: space-between;
+  }
+}

@@ -1,10 +1,11 @@
 .navLinks {
-  display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-gap: 80px;
+  display: flex;
   list-style: none;
-  text-align: center;
+  flex-flow: row;
   width: 70vw;
-  justify-content: center;
-  margin-right: 2rem;
+  justify-content: space-evenly;
+}
+.navItem:hover {
+  color: #ffd662ff;
+  transition: all 0.2s ease-out;
 }
