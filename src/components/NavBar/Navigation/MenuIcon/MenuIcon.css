@@ -1,0 +1,11 @@
+.MenuIcon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .MenuIcon {
+    display: flex;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+}

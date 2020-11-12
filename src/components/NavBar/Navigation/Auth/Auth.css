@@ -1,0 +1,8 @@
+.auth {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-icon {
+  margin-right: 10px;
+}

@@ -1,11 +1,10 @@
 import React from "react"
 
-
-
+import HeaderFooterLayout from "../layouts/HeaderFooter"
 const IndexPage = () => (
- <main>
-   <h1>Hello</h1>
- </main>
+  <HeaderFooterLayout>
+    <h1>Hello this is starting page</h1>
+  </HeaderFooterLayout>
 )
 
 export default IndexPage

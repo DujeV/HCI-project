@@ -1,0 +1,11 @@
+.navLinks {
+  display: flex;
+  list-style: none;
+  flex-flow: row;
+  width: 70vw;
+  justify-content: space-evenly;
+}
+.navItem:hover {
+  color: #ffd662ff;
+  transition: all 0.2s ease-out;
+}
