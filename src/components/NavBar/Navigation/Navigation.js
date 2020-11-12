@@ -1,9 +1,12 @@
 import React from "react"
 import "./Navigation.css"
+import NavLinks from "./NavLinks/NavLinks"
+import Auth from "./Auth/Auth"
 
 const Navigation = () => (
   <section className="navigation">
-    <h1>This is navigation </h1>
+    <NavLinks />
+    <Auth />
   </section>
 )
 

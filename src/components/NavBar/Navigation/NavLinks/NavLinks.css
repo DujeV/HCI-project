@@ -1,0 +1,10 @@
+.navLinks {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 80px;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: center;
+  margin-right: 2rem;
+}

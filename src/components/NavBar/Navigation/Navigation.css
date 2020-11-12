@@ -1,2 +1,5 @@
 .navigation {
+  display: flex;
+  align-items: center;
+  flex: 7fr 3fr;
 }

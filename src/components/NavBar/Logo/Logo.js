@@ -1,10 +1,12 @@
 import React from "react"
 import "./Logo.css"
+import LogoSVG from "../../../svgs/logo.svg"
 
 const Logo = () => (
-  <section className="logo">
-    <span>EURO 2021</span>
-  </section>
+  <div className="logoContainer">
+    <LogoSVG className="uefaLogo" />
+    <h3>EURO 2021</h3>
+  </div>
 )
 
 export default Logo
