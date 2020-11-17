@@ -5,7 +5,6 @@ const HeaderFooterLayout = ({ children }) => (
   <>
     <NavigationHeader />
     {children}
-    <h1>Page content</h1>
   </>
 )
 
