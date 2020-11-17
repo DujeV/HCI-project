@@ -5,22 +5,22 @@ export const navs = [
   },
   {
     tab: "Teams",
-    to: "/",
+    to: "/teams",
   },
   {
     tab: "Venues",
-    to: "/",
+    to: "/venues",
   },
   {
     tab: "Schedule",
-    to: "/",
+    to: "/schedule",
   },
   {
     tab: "PTW",
-    to: "/",
+    to: "/ptw",
   },
   {
     tab: "History",
-    to: "/",
+    to: "/history",
   },
 ]
