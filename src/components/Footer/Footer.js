@@ -8,8 +8,8 @@ function Footer() {
   return (
     <footer>
       <div className="footer-content">
-        <h3>EURO 2021</h3>
-        <p>The greatest competiton</p>
+        <h1>EURO 2021</h1>
+        <p>" Til corona do us part "</p>
         <ul className="socials">
           <li>
             <a href="#">
