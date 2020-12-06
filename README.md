@@ -1,18 +1,12 @@
 <h1 align="center">HCI Project - EURO 2021 ⚽ 🏆</h1>
 
----
-
 <h2>Description 📃</h2>
 
 This web application is mockup of the official UEFA EURO 2021 website. It contains information about teams that are competing in championship alongside venues and key players.
 
----
-
 <h2>Purpose 🎨 📝</h2>
 
-_EURO 2021_ web app is project for HCI class @ FESB, university of Split. It's used to showcase all the fundamentals of front-end web programming. Its' prototype blueprints are divided into 2 directories. Sketch version prototype is in `low-fidelity` directory, while production prototype is in `high-fidelity` directory.
-
----
+_EURO 2021_ web app is project for HCI class @ FESB, university of Split. It's used to showcase all the fundamentals of front-end web programming. Its' prototype blueprints are divided into 2 directories. Sketch version prototype is in `low_fidelity` directory, while production prototype is in `high_fidelity` directory.
 
 <h2>Quick start 🚀</h2>
 
@@ -27,7 +21,5 @@ And lastly, you can start application by running this command:
 `$ gatsby develop`
 
 Happy hacking. 💻 😉
-
----
 
 <h5 align="center"> ©️ Designed and developed by Duje Vidović 🎓 and Toni Blažević 🎓, FESB 2020.</h5>
