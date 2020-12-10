@@ -1,9 +1,11 @@
 import React from "react"
+import { Link } from "gatsby"
 import "./Footer.css"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import TwitterIcon from "@material-ui/icons/Twitter"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import LanguageIcon from "@material-ui/icons/Language"
+
 function Footer() {
   return (
     <footer>
@@ -12,32 +14,32 @@ function Footer() {
         <p>" Til corona do us part "</p>
         <ul className="socials">
           <li>
-            <a href="#">
+            <Link to="/404">
               <FacebookIcon className="icon" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="/404">
               <TwitterIcon className="icon" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="/404">
               <InstagramIcon className="icon" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="/404">
               <LanguageIcon className="icon" />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
       <div className="footer-bottom">
-      <p>&copy; 2020 HCI class. All rights reserved</p>
+        <p>&copy; 2020 HCI class. All rights reserved</p>
       </div>
     </footer>
   )
 }
- 
+
 export default Footer

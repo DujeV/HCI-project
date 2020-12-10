@@ -20,7 +20,7 @@ export const navs = [
     to: "/ptw",
   },
   {
-    tab: "History",
-    to: "/history",
+    tab: "Blog",
+    to: "/blog",
   },
 ]

@@ -1,9 +1,9 @@
 import React from "react"
-
 import HeaderFooterLayout from "../layouts/HeaderFooter"
+import TitleImage from "../components/TitleImage/TitleImage"
 const IndexPage = () => (
   <HeaderFooterLayout>
-    <h1>Hello this is starting page</h1>
+    <TitleImage />
   </HeaderFooterLayout>
 )
 

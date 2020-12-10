@@ -1,0 +1,30 @@
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 40%;
+  left: 50%;
+  align-items: center;
+}
+.counter-container h1 {
+  color: #ffd700;
+  letter-spacing: 10pt;
+  font-weight: bold;
+  padding-bottom: 60px;
+  font-size: 2rem;
+}
+.countdown-wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  text-align: center;
+  min-width: 600px;
+  background: transparent;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.time {
+  font-weight: bold;
+  color: #ffd700;
+}
