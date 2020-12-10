@@ -11,7 +11,7 @@ function Footer() {
     <footer>
       <div className="footer-content">
         <h1>EURO 2021</h1>
-        <p>" Til corona do us part "</p>
+        <p>24 teams - 12 cities - 1 winner</p>
         <ul className="socials">
           <li>
             <Link to="/404">

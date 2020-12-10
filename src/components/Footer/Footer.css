@@ -25,11 +25,11 @@ footer {
 }
 
 .footer-content p {
-  font-family: "Courgette", cursive;
+  /* font-family: "Courgette", cursive; */
   max-width: 500px;
   margin: 10px auto;
   line-height: 28px;
-  font-size: 30px;
+  font-size: 24px;
 }
 .socials {
   list-style: none;
