@@ -4,6 +4,10 @@
 
 This web application is mockup of the official UEFA EURO 2021 website. It contains information about teams that are competing in championship alongside venues and key players.
 
+Live DEMO : [here](https://euro-2021.netlify.app/)
+
+High fidelity prototype : [here](https://www.figma.com/proto/BrdN3pdWfzQ1wXskoJADhD/EURO?node-id=46%3A3&viewport=1271%2C680%2C0.12047889828681946&scaling=contain)
+
 <h2>Purpose 🎨 📝</h2>
 
 _EURO 2021_ web app is project for HCI class @ FESB, university of Split. It's used to showcase all the fundamentals of front-end web programming. Its' prototype blueprints are divided into 2 directories. Sketch version prototype is in `low_fidelity` directory, while production prototype is in `high_fidelity` directory.
