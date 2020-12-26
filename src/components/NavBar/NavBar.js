@@ -16,16 +16,16 @@ function Navigation() {
   const closeMobileMenu = () => setClick(false)
 
   return (
-    <>
+    <div className="navbarContainer">
       <Link to="/" className="logoContainer" onClick={closeMobileMenu}>
         <LogoSVG />
         <h3>EURO 2021</h3>
       </Link>
       {/*eslint-disable-next-line*/}
-      <div className="MenuIcon" onClick={handleClick}>
+      <div className="menuIcon" onClick={handleClick}>
         {click ? <CloseIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
       </div>
-      <li className={click ? "nav-menu active" : "nav-menu"}>
+      <li className={click ? "navMenu active" : "navMenu"}>
         {navs.map(({ tab, to }) => (
           <Link to={to} className="navLinks" onClick={closeMobileMenu}>
             {tab}
@@ -33,10 +33,10 @@ function Navigation() {
         ))}
       </li>
       <Link to="/404" className="auth">
-        <AccountCircleIcon className="user-icon" />
+        <AccountCircleIcon className="userIcon" />
         Log In
       </Link>
-    </>
+    </div>
   )
 }
 export default Navigation

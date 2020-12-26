@@ -1,19 +1,26 @@
+/*NAVBAR CONTAINER*/
+.navbarContainer {
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+  z-index: 1;
+}
+
 /*LOGO*/
 .logoContainer {
-  width: 120px;
-  height: 65px;
+  padding: 5px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 }
 /*BURGER MENU ICON*/
-.MenuIcon {
+.menuIcon {
   display: none;
 }
 
 /*NAVIGATION ITEMS CONTAINER*/
-.nav-menu {
+.navMenu {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,9 +32,9 @@
 .navLinks {
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 40px;
   text-decoration: none;
-  padding: 0.5rem 2rem;
+  padding: 0.2rem 1.6rem;
 }
 .navLinks:hover {
   color: #ffd662ff;
@@ -37,18 +44,18 @@
 /*AUTH*/
 .auth {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 150px;
 }
-.user-icon {
+.userIcon {
   margin-right: 7px;
 }
 
 /*MOBILE STYLES*/
 @media screen and (max-width: 1000px) {
-  .logoContainer {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .MenuIcon {
+  .menuIcon {
     display: block;
     position: absolute;
     top: 0;
@@ -57,27 +64,25 @@
     cursor: pointer;
   }
 
-  .nav-menu {
+  .navMenu {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     width: 100%;
-    max-height: 100%;
+    height: 90vh;
     position: absolute;
-    top: 80px;
-    right: -100%;
+    top: -1000px;
     opacity: 1;
-    transition: all 0.5s ease;
-  }
-  .nav-menu.active {
+    transition: all 0.2s ease;
     background: #242222;
-    right: 0;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 1;
+  }
+  .navMenu.active {
+    top: 80px;
   }
   .navLinks {
-    height: 80%;
-    padding: 2rem;
+    height: 140px;
+    padding: 1rem 0rem;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     flex-flow: column;
   }
