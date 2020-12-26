@@ -3,9 +3,10 @@
   flex-direction: column;
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
-  top: 40%;
+  top: 35%;
   left: 50%;
   align-items: center;
+  z-index: 1;
 }
 .counter-container h1 {
   color: #ffd700;
@@ -17,14 +18,49 @@
 .countdown-wrapper {
   display: flex;
   flex-flow: row;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   min-width: 600px;
-  background: transparent;
+  width: 100%;
   font-size: 2rem;
   text-transform: uppercase;
+}
+.time-text {
+  color: white;
 }
 .time {
   font-weight: bold;
   color: #ffd700;
+}
+
+@media only screen and (max-width: 620px) {
+  .counter-container {
+    top: 50%;
+  }
+  .countdown-wrapper {
+    font-size: 1.2rem;
+    flex-flow: column;
+    min-width: 300px;
+  }
+  .counter-container h1 {
+    padding-bottom: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 7pt;
+  }
+
+  .time-section {
+    padding: 15px 0px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .counter-container {
+    top: 55%;
+  }
+  .countdown-wrapper {
+    min-width: 200px;
+  }
+  .time-section {
+    padding: 5px 0px;
+  }
 }

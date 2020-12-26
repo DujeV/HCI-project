@@ -1,0 +1,13 @@
+.backgroundImage {
+  top: 80px;
+  height: 75vh;
+  width: 100%;
+  transition: 0.5s ease-out;
+}
+
+@media only screen and (max-width: 740px) {
+  .backgroundImage {
+    height: 70vh;
+    transition: 0.5s ease-out;
+  }
+}
