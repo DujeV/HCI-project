@@ -51,27 +51,27 @@ const Counter = () => {
   }
 
   return (
-    <div className="counter-container">
+    <div className="counterContainer">
       <h1>EURO STARTS IN </h1>
-      <div className="countdown-wrapper">
-        <div className="time-section">
+      <div className="countdownWrapper">
+        <div className="timeSection">
           <div className="time">{state.days || "0"}</div>
-          <small className="time-text">Days</small>
+          <small className="timeText">Days</small>
         </div>
 
-        <div className="time-section">
+        <div className="timeSection">
           <div className="time">{state.hours || "00"}</div>
-          <small className="time-text">Hours</small>
+          <small className="timeText">Hours</small>
         </div>
 
-        <div className="time-section">
+        <div className="timeSection">
           <div className="time">{state.minutes || "00"}</div>
-          <small className="time-text">Minutes</small>
+          <small className="timeText">Minutes</small>
         </div>
 
-        <div className="time-section">
+        <div className="timeSection">
           <div className="time">{state.seconds || "00"}</div>
-          <small className="time-text">Seconds</small>
+          <small className="timeText">Seconds</small>
         </div>
       </div>
     </div>

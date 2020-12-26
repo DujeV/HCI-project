@@ -1,4 +1,4 @@
-.counter-container {
+.counterContainer {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -8,14 +8,14 @@
   align-items: center;
   z-index: 1;
 }
-.counter-container h1 {
+.counterContainer h1 {
   color: #ffd700;
   letter-spacing: 10pt;
   font-weight: bold;
   padding-bottom: 60px;
   font-size: 2rem;
 }
-.countdown-wrapper {
+.countdownWrapper {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -25,7 +25,7 @@
   font-size: 2rem;
   text-transform: uppercase;
 }
-.time-text {
+.timeText {
   color: white;
 }
 .time {
@@ -34,33 +34,33 @@
 }
 
 @media only screen and (max-width: 620px) {
-  .counter-container {
-    top: 50%;
+  .counterContainer {
+    top: 65%;
   }
-  .countdown-wrapper {
+  .countdownWrapper {
     font-size: 1.2rem;
     flex-flow: column;
     min-width: 300px;
   }
-  .counter-container h1 {
-    padding-bottom: 30px;
+  .counterContainer h1 {
+    padding-bottom: 25px;
     font-size: 1.2rem;
     text-align: center;
     letter-spacing: 7pt;
   }
 
-  .time-section {
-    padding: 15px 0px;
+  .timeSection {
+    padding: 10px 0px;
   }
 }
 @media only screen and (max-width: 350px) {
-  .counter-container {
-    top: 55%;
+  .counterContainer {
+    top: 60%;
   }
-  .countdown-wrapper {
+  .countdownWrapper {
     min-width: 200px;
   }
-  .time-section {
+  .timeSection {
     padding: 5px 0px;
   }
 }

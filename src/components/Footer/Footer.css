@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background: #111;
-  height: auto;
-  width: 100vw;
   padding-top: 40px;
   color: #fff;
 }
@@ -29,7 +23,7 @@ footer {
   max-width: 500px;
   margin: 10px auto;
   line-height: 28px;
-  font-size: 24px;
+  font-size: 1.4rem;
 }
 .socials {
   list-style: none;
@@ -49,11 +43,12 @@ footer {
 
 .socials a .icon {
   font-size: 1.8rem;
-  transition: color 0.4s ease;
+  transition: 0.4s ease-out;
 }
 
 .socials a:hover .icon {
   color: #ffd662ff;
+  transition: 0.5s ease-out;
 }
 
 .footer-bottom {
@@ -66,9 +61,25 @@ footer {
   font-size: 14px;
   word-spacing: 2px;
   text-transform: capitalize;
+  font-size: 0.8rem;
 }
 .footer-bottom span {
   text-transform: uppercase;
   opacity: 0.4;
   font-weight: 200;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-content h1 {
+    font-size: 1.1rem;
+  }
+  .footer-content p {
+    font-size: 1rem;
+  }
+  .socials a .icon {
+    font-size: 1.4rem;
+  }
+  .footer-bottom p {
+    font-size: 0.7rem;
+  }
 }
