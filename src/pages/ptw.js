@@ -1,7 +1,7 @@
 import React from "react"
 import HeaderFooterLayout from "../layouts/HeaderFooter"
 const PlayersToWatch = () => (
-  <HeaderFooterLayout>
+  <HeaderFooterLayout activeTab="PTW">
     <h1>PLAYERS TO WATCH</h1>
   </HeaderFooterLayout>
 )

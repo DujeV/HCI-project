@@ -9,7 +9,7 @@ import "./NavBar.css"
 import LogoSVG from "../../svgs/logo.svg"
 import { navs } from "../../constants/const"
 
-function Navigation() {
+function Navigation({ activeTab }) {
   const [click, setClick] = useState(false)
 
   const handleClick = () => setClick(!click)
@@ -27,15 +27,19 @@ function Navigation() {
       </div>
       <li className={click ? "navMenu active" : "navMenu"}>
         {navs.map(({ tab, to }) => (
-          <Link to={to} className="navLinks" onClick={closeMobileMenu}>
+          <Link
+            to={to}
+            className={tab === activeTab ? "navLinks active" : "navLinks"}
+            onClick={closeMobileMenu}
+          >
             {tab}
           </Link>
         ))}
+        <button className="loginButton">
+          <AccountCircleIcon className="userIcon" />
+          <span>Log In</span>
+        </button>
       </li>
-      <Link to="/404" className="auth">
-        <AccountCircleIcon className="userIcon" />
-        Log In
-      </Link>
     </div>
   )
 }

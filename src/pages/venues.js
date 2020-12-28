@@ -1,7 +1,7 @@
 import React from "react"
 import HeaderFooterLayout from "../layouts/HeaderFooter"
 const Venues = () => (
-  <HeaderFooterLayout>
+  <HeaderFooterLayout activeTab="Venues">
     <h1>VENUES</h1>
   </HeaderFooterLayout>
 )

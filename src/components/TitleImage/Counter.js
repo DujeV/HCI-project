@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react"
 import "./Counter.css"
 
 const Counter = () => {
-  const [countdownDate, setCountdownDate] = useState(
-    new Date("6/11/2021").getTime()
-  )
+  const countdownDate = new Date("6/11/2021").getTime()
   const [state, setState] = useState({
     days: 0,
     hours: 0,

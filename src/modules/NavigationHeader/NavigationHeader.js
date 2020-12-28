@@ -2,9 +2,9 @@ import React from "react"
 import NavBar from "../../components/Navbar/NavBar"
 import "./NavigationHeader.css"
 
-const NavigationHeader = () => (
+const NavigationHeader = ({ activeTab }) => (
   <section className="navigationHeader">
-    <NavBar />
+    <NavBar activeTab={activeTab} />
   </section>
 )
 export default NavigationHeader
