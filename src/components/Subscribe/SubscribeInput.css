@@ -12,6 +12,7 @@
   font-size: 1.8rem;
   color: white;
   letter-spacing: 3pt;
+  text-align: center;
 }
 
 .roundedFields {
@@ -51,4 +52,13 @@ button {
 button:hover {
   background: #353535;
   transition: 0.2s ease-out;
+}
+
+@media only screen and (max-width: 740px) {
+  .roundedFields {
+    flex-direction: column;
+  }
+  .newsletterInput {
+    padding-bottom: 30px;
+  }
 }

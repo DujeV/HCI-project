@@ -1,12 +1,15 @@
 import React from "react"
 import TrophySvg from "../../svgs/Trophy.svg"
+import TrophySvgMobile from "../../svgs/TrophyMobile.svg"
 import BallSvg from "../../svgs/Ball.svg"
+import BallSvgMobile from "../../svgs/BallMobile.svg"
 import "./Quote.css"
 const Quote = ({ quote, author, description }) => {
   return (
     <div className="quoteContainer">
       <div className="paragraphContainer">
-        <TrophySvg />
+        <TrophySvgMobile className="trophyMobile" />
+        <TrophySvg className="trophy" />
         <div className="paragraph">
           <div className="quote">
             <h1>"{quote}"</h1>
@@ -20,13 +23,14 @@ const Quote = ({ quote, author, description }) => {
             </div>
           </div>
         </div>
-        <TrophySvg />
+        <TrophySvg className="trophy" />
       </div>
       <div className="ballContainer">
-        <BallSvg />
+        <BallSvgMobile className="ballMobile" />
+        <BallSvg className="ball" />
       </div>
     </div>
   )
 }
- 
+
 export default Quote

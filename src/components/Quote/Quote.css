@@ -15,6 +15,10 @@
   justify-content: center;
   align-items: center;
 }
+.trophyMobile,
+.ballMobile {
+  display: none;
+}
 .paragraph {
   max-width: 1000px;
   width: 100%;
@@ -43,4 +47,24 @@
 }
 .description {
   text-align: center;
+}
+
+@media only screen and (max-width: 1050px) {
+  .paragraphContainer {
+    flex-direction: column;
+  }
+  .trophyMobile {
+    display: flex;
+    padding-bottom: 20px;
+  }
+  .ballContainer {
+    padding-top: 20px;
+  }
+  .ballMobile {
+    display: flex;
+  }
+  .trophy,
+  .ball {
+    display: none;
+  }
 }
