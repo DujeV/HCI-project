@@ -1,0 +1,54 @@
+.subscribeinputContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subscribeText h1 {
+  font-size: 1.8rem;
+  color: white;
+  letter-spacing: 3pt;
+}
+
+.roundedFields {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.newsletterInput input {
+  outline: none;
+  display: block;
+  border: none;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #363d4a;
+  background: #fff;
+}
+button {
+  outline: none;
+  display: block;
+  border: none;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 0.7pt;
+  font-family: "Quicksand", sans-serif;
+}
+button:hover {
+  background: #353535;
+  transition: 0.2s ease-out;
+}

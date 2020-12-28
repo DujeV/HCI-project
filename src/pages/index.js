@@ -2,6 +2,7 @@ import React from "react"
 import HeaderFooterLayout from "../layouts/HeaderFooter"
 import TitleImage from "../components/TitleImage/TitleImage"
 import Quote from "../components/Quote/Quote"
+import Subscribe from "../components/Subscribe/Subscribe"
 
 const IndexPage = () => (
   <HeaderFooterLayout>
@@ -11,6 +12,7 @@ const IndexPage = () => (
       author="Antonín Panenka"
       description="makes the pioneering spot-kick method that helped Czech Republic win Euro ’76 sound like a piece of cake"
     />
+    <Subscribe />
   </HeaderFooterLayout>
 )
 
