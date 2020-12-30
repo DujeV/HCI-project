@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   height: 80px;
+  font-size: 1.2rem;
   z-index: 1;
 }
 
@@ -35,7 +36,6 @@
   align-items: center;
   height: 40px;
   text-decoration: none;
-  padding: 0.2rem 0rem;
 }
 .navLinks.active,
 .navLinks:hover {
@@ -49,6 +49,7 @@
   justify-content: center;
   align-items: center;
   background: #007b8d;
+  padding: 5px 10px;
 }
 .loginButton:hover {
   background: #00606f;
@@ -58,7 +59,20 @@
 }
 
 /*MOBILE STYLES*/
+
 @media screen and (max-width: 1000px) {
+  .navbarContainer {
+    font-size: 1rem;
+  }
+  .loginButton {
+    padding: 5px 12px;
+  }
+  .userIcon {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .navbarContainer {
     justify-content: center;
   }
@@ -76,7 +90,7 @@
     flex-direction: column;
     height: 90vh;
     position: absolute;
-    top: -1000px;
+    top: -10000px;
     opacity: 1;
     transition: all 0.2s ease;
     background: #242222;
@@ -94,8 +108,5 @@
   .navLinks:hover,
   .navLinks.active {
     border: 0;
-  }
-  .userIcon {
-    display: none !important;
   }
 }

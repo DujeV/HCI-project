@@ -1,8 +1,14 @@
 import React from "react"
 import HeaderFooterLayout from "../layouts/HeaderFooter"
+import Quote from "../components/Quote/Quote"
+
 const PlayersToWatch = () => (
   <HeaderFooterLayout activeTab="PTW">
-    <h1>PLAYERS TO WATCH</h1>
+    <Quote
+      quote="What am I to think when the coach has his hands and head up the backside of certain players."
+      author="Otto Rehhagel"
+      description="discusses the perks of helping the Greeks pull off one of the biggest shocks in world football at Euro ’04."
+    />
   </HeaderFooterLayout>
 )
 

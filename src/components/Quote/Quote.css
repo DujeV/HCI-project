@@ -2,6 +2,7 @@
 
 .quoteContainer {
   padding: 80px 30px;
+  transition: 0.5s all ease-out;
 }
 
 .paragraphContainer {
@@ -52,6 +53,9 @@
 @media only screen and (max-width: 1050px) {
   .paragraphContainer {
     flex-direction: column;
+  }
+  .quote h1 {
+    font-size: 1.3rem;
   }
   .trophyMobile {
     display: flex;
