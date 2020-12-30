@@ -7,6 +7,9 @@
   left: 50%;
   align-items: center;
   z-index: 1;
+  max-width: 1000px;
+  width: 100%;
+  transition: 0.5s all ease-out;
 }
 .counterContainer h1 {
   color: #ffd700;
@@ -20,7 +23,7 @@
   flex-flow: row;
   justify-content: space-between;
   text-align: center;
-  min-width: 600px;
+  max-width: 1000px;
   width: 100%;
   font-size: 2rem;
   text-transform: uppercase;
@@ -33,6 +36,17 @@
   color: #ffd700;
 }
 
+@media only screen and (max-width: 1050px) {
+  .counterContainer {
+    max-width: 800px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .counterContainer {
+    max-width: 700px;
+  }
+}
+
 @media only screen and (max-width: 740px) {
   .counterContainer {
     top: 65%;
@@ -40,7 +54,7 @@
   .countdownWrapper {
     font-size: 1.2rem;
     flex-flow: column;
-    min-width: 300px;
+    max-width: 300px;
   }
   .counterContainer h1 {
     padding-bottom: 25px;
@@ -58,9 +72,15 @@
     top: 58%;
   }
   .countdownWrapper {
-    min-width: 300px;
+    max-width: 300px;
   }
   .timeSection {
     padding: 5px 0px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .countdownWrapper {
+    max-width: 260px;
   }
 }

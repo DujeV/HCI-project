@@ -1,0 +1,133 @@
+/*MAIN CONTAINER*/
+.mainContainer {
+  padding: 130px 40px 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer h1 {
+  padding-bottom: 20px;
+  font-size: 3rem;
+  letter-spacing: 2pt;
+  color: white;
+}
+
+/*ALL CARDS CONTAINER*/
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10ch;
+}
+
+/*INDIVIDUAL CARD*/
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  transition: 0.5s all ease-out;
+}
+
+/*FLAG AND NATION NAME*/
+.nationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  padding: 0px 20px;
+}
+.nationContainer p {
+  padding-top: 10px;
+}
+
+/*DATA OF EACH TEAM*/
+.infoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+}
+.infoTitles {
+  font-weight: bold;
+}
+.infoTitles,
+.infoContent {
+  padding: 0px 20px;
+  width: 180px;
+}
+
+.infoTitles p,
+.infoContent p {
+  padding: 15px 0px;
+}
+
+/*MOBILE STYLE*/
+@media screen and (max-width: 1200px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .mainContainer {
+    padding: 130px 10px 50px 10px;
+  }
+  .cards,
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .nationContainer {
+    padding-top: 20px;
+  }
+  .infoContainer {
+    max-width: 460px;
+    width: 100%;
+    padding: 10px 10px;
+  }
+  .infoTitles p,
+  .infoContent p {
+    font-size: 1rem;
+  }
+  .infoTitles,
+  .infoContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10px;
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .infoContainer {
+    max-width: 400px;
+  }
+  .infoTitles p,
+  .infoContent p {
+    font-size: 0.8rem;
+  }
+  .infoTitles,
+  .infoContent {
+    width: 190px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .infoContainer {
+    max-width: 260px;
+  }
+  .infoTitles p,
+  .infoContent p {
+    font-size: 0.7rem;
+  }
+  .infoTitles,
+  .infoContent {
+    width: 130px;
+  }
+}
