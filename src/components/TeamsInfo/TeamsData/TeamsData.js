@@ -24,7 +24,7 @@ export const teams = [
     nation: "Croatia",
     nationNick: "CRO",
     eurosPlayed: 5,
-    bestPlace: "QF (2)",
+    bestPlace: "Quarter-finals (2)",
     bestPlayer: "Luka Modrić",
     score: {
       won: 0,
@@ -75,7 +75,7 @@ export const teams = [
     nation: "England",
     nationNick: "ENG",
     eurosPlayed: 9,
-    bestPlace: "SF (2)",
+    bestPlace: "Semi-finals (2)",
     bestPlayer: "Harry Kane",
     score: {
       won: 0,
@@ -109,7 +109,7 @@ export const teams = [
     nation: "Belgium",
     nationNick: "BEL",
     eurosPlayed: 5,
-    bestPlace: "SF (1)",
+    bestPlace: "Semi-finals (1)",
     bestPlayer: "Kevin De Bruyne",
     score: {
       won: 0,
@@ -128,6 +128,74 @@ export const teams = [
     eurosPlayed: 9,
     bestPlace: "Winners (1)",
     bestPlayer: "Memphis Depay",
+    score: {
+      won: 0,
+      drawn: 0,
+      lost: 0,
+      points: 0,
+    },
+  },
+  {
+    flag: {
+      big: require("./UkraineBig.svg"),
+      alt: "Ukraine flag",
+    },
+    nation: "Ukraine",
+    nationNick: "UKR",
+    eurosPlayed: 2,
+    bestPlace: "Group Stage",
+    bestPlayer: "Denys Favorov",
+    score: {
+      won: 0,
+      drawn: 0,
+      lost: 0,
+      points: 0,
+    },
+  },
+  {
+    flag: {
+      big: require("./SwitzerlandBig.svg"),
+      alt: "Switzerland flag",
+    },
+    nation: "Switzerland",
+    nationNick: "SWI",
+    eurosPlayed: 4,
+    bestPlace: "Round of 16 (1)",
+    bestPlayer: "Xherdan Shaqiri",
+    score: {
+      won: 0,
+      drawn: 0,
+      lost: 0,
+      points: 0,
+    },
+  },
+  {
+    flag: {
+      big: require("./RussiaBig.svg"),
+      alt: "Russia flag",
+    },
+    nation: "Russia",
+    nationNick: "RUS",
+    eurosPlayed: 11,
+    bestPlace: "Winners (1)",
+    bestPlayer: "Artem Dzyuba",
+    score: {
+      won: 0,
+      drawn: 0,
+      lost: 0,
+      points: 0,
+    },
+  },
+  {
+    flag: {
+      big: require("./PolandBig.svg"),
+      alt: "Poland flag",
+    },
+    nation: "Poland",
+    nationNick: "POL",
+    eurosPlayed: 3,
+    bestPlace: "Quarter-finals (1)",
+    bestPlayer: "R. Lewandowski",
     score: {
       won: 0,
       drawn: 0,
