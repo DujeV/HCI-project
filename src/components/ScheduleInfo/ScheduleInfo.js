@@ -1,7 +1,8 @@
 import React from "react"
 import BackgroundGradient from "../BackgroundGradient"
 import { teams } from "../TeamsInfo/TeamsData/TeamsData"
-
+import "./ScheduleInfo.css"
+//Material UI
 import Table from "@material-ui/core/Table"
 import TableBody from "@material-ui/core/TableBody"
 import TableCell from "@material-ui/core/TableCell"

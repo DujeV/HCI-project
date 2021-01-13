@@ -1,0 +1,39 @@
+/*MAIN CONTAINER*/
+.scheduleContainer {
+  padding: 130px 40px 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scheduleContainer h1 {
+  padding-bottom: 80px;
+  font-size: 3rem;
+  letter-spacing: 2pt;
+  color: white;
+}
+.tableCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10ch;
+}
+
+.nation {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 2ch;
+}
+.cell {
+  display: flex;
+  justify-content: center;
+}
+.tableRow {
+  padding: 10px 20px;
+  border-radius: 20px !important;
+}
+.tableRow h2 {
+  text-align: center;
+  padding: 10px 0px;
+}
