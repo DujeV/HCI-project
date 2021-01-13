@@ -1,6 +1,7 @@
 export const teams = [
   {
     flag: {
+      small: require("./PortugalSmall.svg"),
       big: require("./PortugalBig.svg"),
       alt: "Portugal flag",
     },
@@ -18,6 +19,7 @@ export const teams = [
   },
   {
     flag: {
+      small: require("./CroatiaSmall.svg"),
       big: require("./CroatiaBig.svg"),
       alt: "Croatia flag",
     },
@@ -35,6 +37,7 @@ export const teams = [
   },
   {
     flag: {
+      small: require("./GermanySmall.svg"),
       big: require("./GermanyBig.svg"),
       alt: "Germany flag",
     },
@@ -52,6 +55,7 @@ export const teams = [
   },
   {
     flag: {
+      small: require("./FranceSmall.svg"),
       big: require("./FranceBig.svg"),
       alt: "France flag",
     },
@@ -69,6 +73,7 @@ export const teams = [
   },
   {
     flag: {
+      small: require("./EnglandSmall.svg"),
       big: require("./EnglandBig.svg"),
       alt: "England flag",
     },
@@ -86,6 +91,7 @@ export const teams = [
   },
   {
     flag: {
+      small: require("./ItalySmall.svg"),
       big: require("./ItalyBig.svg"),
       alt: "Italy flag",
     },
@@ -103,6 +109,7 @@ export const teams = [
   },
   {
     flag: {
+      small: require("./BelgiumSmall.svg"),
       big: require("./BelgiumBig.svg"),
       alt: "Belgium flag",
     },
@@ -120,6 +127,7 @@ export const teams = [
   },
   {
     flag: {
+      small: require("./NetherlandsSmall.svg"),
       big: require("./NetherlandsBig.svg"),
       alt: "Netherlands flag",
     },
@@ -137,6 +145,7 @@ export const teams = [
   },
   {
     flag: {
+      small: require("./UkraineSmall.svg"),
       big: require("./UkraineBig.svg"),
       alt: "Ukraine flag",
     },
@@ -154,6 +163,7 @@ export const teams = [
   },
   {
     flag: {
+      small: require("./SwitzerlandSmall.svg"),
       big: require("./SwitzerlandBig.svg"),
       alt: "Switzerland flag",
     },
@@ -171,6 +181,7 @@ export const teams = [
   },
   {
     flag: {
+      small: require("./RussiaSmall.svg"),
       big: require("./RussiaBig.svg"),
       alt: "Russia flag",
     },
@@ -188,6 +199,7 @@ export const teams = [
   },
   {
     flag: {
+      small: require("./PolandSmall.svg"),
       big: require("./PolandBig.svg"),
       alt: "Poland flag",
     },
