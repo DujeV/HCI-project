@@ -2,23 +2,21 @@ import React, { useState, useEffect } from "react"
 import BackgroundGradient from "../BackgroundGradient"
 import { teams } from "./TeamsData/TeamsData.js"
 import "./TeamsInfo.css"
-//SortBy
 
 const TeamsInfo = () => {
   const [data, setData] = useState([])
+  const [filterData, setFilterData] = useState([])
   const [sortType, setSortType] = useState("A-Z")
   const [search, setSearch] = useState("")
 
   useEffect(() => {
     let results = []
+    setFilterData(teams)
 
-    //
     if (search.length < 1) {
       setData([...teams].sort(compare))
-    }
-    //
-    else if (search.length > 0) {
-      results = data.filter(team =>
+    } else if (search.length > 0) {
+      results = filterData.filter(team =>
         team.nation.toLowerCase().match(search.toLowerCase())
       )
       setData(results.sort(compare))
@@ -84,8 +82,8 @@ const TeamsInfo = () => {
           className={data.length <= 1 ? "cards activeOne" : "cards activeMore"}
         >
           {data.map(
-            ({ flag, nation, eurosPlayed, bestPlace, bestPlayer, id }) => (
-              <div className="card" key={id}>
+            ({ flag, nation, eurosPlayed, bestPlace, bestPlayer }, index) => (
+              <div className="card" key={index}>
                 <div className="nationContainer">
                   <img src={flag.big} alt={flag.alt} />
                   <p>{nation}</p>
