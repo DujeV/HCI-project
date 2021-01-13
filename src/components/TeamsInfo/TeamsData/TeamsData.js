@@ -67,4 +67,72 @@ export const teams = [
       points: 0,
     },
   },
+  {
+    flag: {
+      big: require("./EnglandBig.svg"),
+      alt: "England flag",
+    },
+    nation: "England",
+    nationNick: "ENG",
+    eurosPlayed: 9,
+    bestPlace: "SF (2)",
+    bestPlayer: "Harry Kane",
+    score: {
+      won: 0,
+      drawn: 0,
+      lost: 0,
+      points: 0,
+    },
+  },
+  {
+    flag: {
+      big: require("./ItalyBig.svg"),
+      alt: "Italy flag",
+    },
+    nation: "Italy",
+    nationNick: "ITA",
+    eurosPlayed: 9,
+    bestPlace: "Winners (1)",
+    bestPlayer: "Ciro Immobile",
+    score: {
+      won: 0,
+      drawn: 0,
+      lost: 0,
+      points: 0,
+    },
+  },
+  {
+    flag: {
+      big: require("./BelgiumBig.svg"),
+      alt: "Belgium flag",
+    },
+    nation: "Belgium",
+    nationNick: "BEL",
+    eurosPlayed: 5,
+    bestPlace: "SF (1)",
+    bestPlayer: "Kevin De Bruyne",
+    score: {
+      won: 0,
+      drawn: 0,
+      lost: 0,
+      points: 0,
+    },
+  },
+  {
+    flag: {
+      big: require("./NetherlandsBig.svg"),
+      alt: "Netherlands flag",
+    },
+    nation: "Netherlands",
+    nationNick: "NDE",
+    eurosPlayed: 9,
+    bestPlace: "Winners (1)",
+    bestPlayer: "Memphis Depay",
+    score: {
+      won: 0,
+      drawn: 0,
+      lost: 0,
+      points: 0,
+    },
+  },
 ]
