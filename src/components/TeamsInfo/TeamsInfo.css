@@ -65,6 +65,37 @@
   padding: 15px 0px;
 }
 
+/*DROPDOWN SELECT and SEARCH CONTAINER*/
+.dropdownBox,
+.searchContainer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 2ch;
+}
+.dropdownBox label,
+.searchContainer label {
+  font-size: 1.3rem;
+}
+.selectedDropDown,
+.inputField {
+  padding: 5px;
+  border-radius: 10px;
+  background: #fff;
+}
+.selectedDropDown select,
+.searchContainer input {
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 0px 3px;
+}
+
+.selectedDropDown select {
+  cursor: pointer;
+}
+
 /*MOBILE STYLE*/
 @media screen and (max-width: 1200px) {
   .cards {
