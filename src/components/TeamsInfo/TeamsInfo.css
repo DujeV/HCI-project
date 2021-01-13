@@ -16,6 +16,16 @@
 
 /*ALL CARDS CONTAINER*/
 .cards {
+  padding-top: 80px;
+}
+
+.activeOne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activeMore {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10ch;
@@ -91,7 +101,6 @@
   outline: none;
   padding: 0px 3px;
 }
-
 .selectedDropDown select {
   cursor: pointer;
 }
@@ -150,6 +159,10 @@
 }
 
 @media screen and (max-width: 440px) {
+  .dropdownBox,
+  .searchContainer {
+    flex-direction: column;
+  }
   .infoContainer {
     max-width: 260px;
   }
