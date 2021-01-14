@@ -1,7 +1,7 @@
 export const teams = [
   {
-    groupName : 'A',
-    groupTeams : [
+    groupName: "A",
+    groupTeams: [
       {
         flag: {
           small: require("./PortugalSmall.svg"),
@@ -72,15 +72,14 @@ export const teams = [
           drawn: 0,
           lost: 0,
           points: 0,
-        }
+        },
       },
-    ]
-   
+    ],
   },
-  
+
   {
-    groupName : 'B',
-    groupTeams : [
+    groupName: "B",
+    groupTeams: [
       {
         flag: {
           small: require("./EnglandSmall.svg"),
@@ -142,7 +141,7 @@ export const teams = [
           alt: "Netherlands flag",
         },
         nation: "Netherlands",
-        nationNick: "NDE",
+        nationNick: "NLD",
         eurosPlayed: 9,
         bestPlace: "Winners (1)",
         bestPlayer: "Memphis Depay",
@@ -153,13 +152,12 @@ export const teams = [
           points: 0,
         },
       },
-    ]
-   
+    ],
   },
-  
+
   {
-    groupName : 'C',
-    groupTeams : [
+    groupName: "C",
+    groupTeams: [
       {
         flag: {
           small: require("./UkraineSmall.svg"),
@@ -232,13 +230,12 @@ export const teams = [
           points: 0,
         },
       },
-    ]
-   
+    ],
   },
-  
+
   {
-    groupName : 'D',
-    groupTeams : [
+    groupName: "D",
+    groupTeams: [
       {
         flag: {
           small: require("./AustriaSmall.svg"),
@@ -311,7 +308,6 @@ export const teams = [
           points: 0,
         },
       },
-    ]
-   
+    ],
   },
-  ]
+]

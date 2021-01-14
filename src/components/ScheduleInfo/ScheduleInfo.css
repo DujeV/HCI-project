@@ -37,6 +37,7 @@
   color: white;
 }
 .matchInfo span {
+  letter-spacing: 2pt;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -78,16 +79,17 @@
   display: flex;
   align-items: center;
   gap: 2ch;
+  font-weight: bold;
 }
 .cell {
   display: flex;
   justify-content: center;
 }
-.tableRow {
+.tableCard {
   padding: 10px 20px;
   border-radius: 20px !important;
 }
-.tableRow h2 {
+.tableCard h2 {
   letter-spacing: 3pt;
   text-align: center;
   padding: 10px 0px;
