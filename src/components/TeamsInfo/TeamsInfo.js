@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from "react"
 import BackgroundGradient from "../BackgroundGradient"
-import { teams } from "./TeamsData/TeamsData.js"
+import {TeamsDataProxy} from "./TeamsData/TeamsDataProxy";
 import "./TeamsInfo.css"
 
 const TeamsInfo = () => {
   const [data, setData] = useState([])
-  const [filterData, setFilterData] = useState([])
   const [sortType, setSortType] = useState("A-Z")
   const [search, setSearch] = useState("")
 
   useEffect(() => {
     let results = []
-    setFilterData(teams)
-
+    let filterData = [];
+    filterData = TeamsDataProxy();
     if (search.length < 1) {
-      setData([...teams].sort(compare))
+      setData([...filterData].sort(compare))
     } else if (search.length > 0) {
       results = filterData.filter(team =>
         team.nation.toLowerCase().match(search.toLowerCase())
