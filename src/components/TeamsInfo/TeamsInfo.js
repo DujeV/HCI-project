@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import BackgroundGradient from "../BackgroundGradient"
-import {TeamsDataProxy} from "./TeamsData/TeamsDataProxy";
+import { TeamsDataProxy } from "./TeamsData/TeamsDataProxy"
 import "./TeamsInfo.css"
 
 const TeamsInfo = () => {
@@ -10,15 +10,17 @@ const TeamsInfo = () => {
 
   useEffect(() => {
     let results = []
-    let filterData = [];
-    filterData = TeamsDataProxy();
+    let filterData = []
+    filterData = TeamsDataProxy()
     if (search.length < 1) {
       setData([...filterData].sort(compare))
     } else if (search.length > 0) {
-
-      for (let i =0; i<filterData.length;i++) {
-        if(filterData[i].nation.substr(0,search.length).toLowerCase() == search.toLowerCase()){
-          results.push(filterData[i]);
+      for (let i = 0; i < filterData.length; i++) {
+        if (
+          filterData[i].nation.substr(0, search.length).toLowerCase() ===
+          search.toLowerCase()
+        ) {
+          results.push(filterData[i])
         }
       }
       setData(results.sort(compare))
