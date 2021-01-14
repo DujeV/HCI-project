@@ -15,6 +15,62 @@ const ScheduleInfo = () => {
     return (
       <BackgroundGradient>
         <div className="scheduleContainer">
+          <h1>Matches</h1>
+          <div className="allMatchesContainer">
+            <div className="match">
+              <div className="matchInfo">
+                <span>MATCH #1 - Group A</span>
+                <p>Friday, 12 June 2021</p>
+                <p>San Siro, Milano</p>
+              </div>
+              <div className="matchTime">
+                {teams.slice(0, 1).map(({ flag, nationNick }, index) => (
+                  <div className="borderBoxFirst" key={index}>
+                    <div className="nation box">
+                      <p>{nationNick}</p>
+                      <img src={flag.small} alt={flag.alt} />
+                    </div>
+                  </div>
+                ))}
+                <span>21 : 00</span>
+                {teams.slice(1, 2).map(({ flag, nationNick }, index) => (
+                  <div className="borderBoxSecond" key={index}>
+                    <div className="nation box">
+                      <img src={flag.small} alt={flag.alt} />
+                      <p>{nationNick}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="match">
+              <div className="matchInfo">
+                <span>MATCH #2 - Group B</span>
+                <p>Saturday, 13 June 2021</p>
+                <p>Alianz Arena, Munchen</p>
+              </div>
+              <div className="matchTime">
+                {teams.slice(2, 3).map(({ flag, nationNick }, index) => (
+                  <div className="borderBoxFirst" key={index}>
+                    <div className="nation box">
+                      <p>{nationNick}</p>
+                      <img src={flag.small} alt={flag.alt} />
+                    </div>
+                  </div>
+                ))}
+                <span>19 : 00</span>
+                {teams.slice(3, 4).map(({ flag, nationNick }, index) => (
+                  <div className="borderBoxSecond" key={index}>
+                    <div className="nation box">
+                      <img src={flag.small} alt={flag.alt} />
+                      <p>{nationNick}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <h1>Standings</h1>
           <div className="tableCards">
             <div className="tableCard">
@@ -43,8 +99,8 @@ const ScheduleInfo = () => {
                   <TableBody>
                     {teams
                       .slice(0, 4)
-                      .map(({ id, flag, nationNick, score }) => (
-                        <TableRow key={id}>
+                      .map(({ flag, nationNick, score }, index) => (
+                        <TableRow key={index} className="rowTable">
                           <TableCell>
                             <div className="nation">
                               <img src={flag.small} alt={flag.alt} />
@@ -94,9 +150,9 @@ const ScheduleInfo = () => {
                   </TableHead>
                   <TableBody>
                     {teams
-                      .slice(0, 4)
-                      .map(({ id, flag, nationNick, score }) => (
-                        <TableRow key={id}>
+                      .slice(4, 8)
+                      .map(({ flag, nationNick, score }, index) => (
+                        <TableRow key={index} className="rowTable">
                           <TableCell>
                             <div className="nation">
                               <img src={flag.small} alt={flag.alt} />
