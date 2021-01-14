@@ -10,9 +10,63 @@
 .scheduleContainer h1 {
   padding-bottom: 80px;
   font-size: 3rem;
-  letter-spacing: 2pt;
+  letter-spacing: 3pt;
   color: white;
 }
+
+/* ALL MATCHES*/
+.allMatchesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8ch;
+  padding-bottom: 80px;
+}
+
+/*INDIVIDUAL MATCH*/
+.match {
+  display: flex;
+  flex-direction: column;
+  gap: 3ch;
+}
+.matchInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1ch;
+  color: white;
+}
+.matchInfo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.matchTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3ch;
+  background-color: white;
+  border-radius: 30px;
+}
+.borderBoxFirst {
+  border-right: 2pt solid lightgray;
+  padding: 10px 30px;
+}
+.borderBoxSecond {
+  border-left: 2pt solid lightgray;
+  padding: 10px 30px;
+}
+.box {
+  letter-spacing: 2pt;
+  font-weight: bold;
+}
+.matchTime span {
+  letter-spacing: 2pt;
+  font-weight: bold;
+  color: rgb(137, 137, 137);
+}
+
+/*STANDINGS*/
 .tableCards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -34,6 +88,7 @@
   border-radius: 20px !important;
 }
 .tableRow h2 {
+  letter-spacing: 3pt;
   text-align: center;
   padding: 10px 0px;
 }
