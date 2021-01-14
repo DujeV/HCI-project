@@ -1,3 +1,4 @@
+/*COUNTER CONTAINER*/
 .counterContainer {
   display: flex;
   flex-direction: column;
@@ -11,18 +12,33 @@
   width: 100%;
   transition: 0.5s all ease-out;
 }
-.counterContainer h1 {
-  color: #ffd700;
-  letter-spacing: 10pt;
+
+/*TITLE AND DATE*/
+.counterContainer h1,
+h2 {
   font-weight: bold;
-  padding-bottom: 60px;
-  font-size: 2rem;
+  padding-bottom: 35px;
 }
+.title {
+  color: #ffd700;
+  font-size: 4rem;
+  letter-spacing: 10pt;
+}
+.date {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 5pt;
+  display: flex;
+  gap: 1ch;
+}
+
+/*COUNTING INFO CONTAINER*/
 .countdownWrapper {
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
+  gap: 4ch;
   max-width: 1000px;
   width: 100%;
   font-size: 2rem;
@@ -34,6 +50,28 @@
 .time {
   font-weight: bold;
   color: #ffd700;
+}
+
+/*MOBILE STYLES*/
+@media only screen and (max-width: 1700px) {
+  .countdownWrapper {
+    gap: 3ch;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .countdownWrapper {
+    gap: 2ch;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .counterContainer {
+    top: 55%;
+  }
+  .countdownWrapper {
+    flex-flow: column;
+    max-width: 300px;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
@@ -49,33 +87,31 @@
 
 @media only screen and (max-width: 740px) {
   .counterContainer {
-    top: 65%;
+    top: 60%;
+  }
+  .counterContainer h1,
+  h2 {
+    padding-bottom: 15px;
   }
   .countdownWrapper {
     font-size: 1.2rem;
-    flex-flow: column;
-    max-width: 300px;
   }
-  .counterContainer h1 {
-    padding-bottom: 25px;
-    font-size: 1.2rem;
-    text-align: center;
-    letter-spacing: 7pt;
+  .title {
+    font-size: 2rem;
   }
-
-  .timeSection {
-    padding: 10px 0px;
+  .date {
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 420px) {
-  .counterContainer {
-    top: 58%;
+  .title {
+    font-size: 1.4rem;
   }
   .countdownWrapper {
     max-width: 300px;
   }
-  .timeSection {
-    padding: 5px 0px;
+  .date {
+    display: none;
   }
 }
 
