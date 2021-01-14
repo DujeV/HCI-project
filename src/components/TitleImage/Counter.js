@@ -50,7 +50,12 @@ const Counter = () => {
 
   return (
     <div className="counterContainer">
-      <h1>EURO STARTS IN </h1>
+      <h1 className="title">EURO 2021</h1>
+      <h2 className="date">
+        <p>11 JUNE </p>
+        <p>-</p>
+        <p> 11 JULY</p>
+      </h2>
       <div className="countdownWrapper">
         <div className="timeSection">
           <div className="time">{state.days || "0"}</div>
