@@ -15,9 +15,12 @@ const TeamsInfo = () => {
     if (search.length < 1) {
       setData([...filterData].sort(compare))
     } else if (search.length > 0) {
-      results = filterData.filter(team =>
-        team.nation.toLowerCase().match(search.toLowerCase())
-      )
+
+      for (let i =0; i<filterData.length;i++) {
+        if(filterData[i].nation.substr(0,search.length).toLowerCase() == search.toLowerCase()){
+          results.push(filterData[i]);
+        }
+      }
       setData(results.sort(compare))
     }
   }, [sortType, search])
