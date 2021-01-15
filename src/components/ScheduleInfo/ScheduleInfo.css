@@ -41,6 +41,12 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
+.matchGroupSpan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1ch;
+}
 .matchTime {
   display: flex;
   justify-content: center;
@@ -93,4 +99,56 @@
   letter-spacing: 3pt;
   text-align: center;
   padding: 10px 0px;
+}
+
+/*MOBILE STYLE*/
+@media screen and (max-width: 800px) {
+  .tableCards {
+    display: flex;
+    flex-direction: column;
+    gap: 10ch;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .matchTime {
+    gap: 0.5ch;
+  }
+  .box {
+    gap: 1ch;
+  }
+  .borderBoxFirst,
+  .borderBoxSecond {
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .scheduleContainer {
+    padding: 130px 7px 50px 7px;
+  }
+  .matchTime {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5ch;
+  }
+  .borderBoxFirst {
+    border: none;
+  }
+  .borderBoxSecond {
+    border: none;
+  }
+  .matchGroupSpan {
+    flex-direction: column;
+  }
+  .matchGroupSpan .dash {
+    display: none;
+  }
+  .tableCard {
+    padding: 0px;
+    border-radius: 0px !important;
+  }
+  .cellTable {
+    padding: 14px 5px !important;
+  }
 }

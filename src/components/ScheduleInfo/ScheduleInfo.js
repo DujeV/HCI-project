@@ -19,7 +19,11 @@ const ScheduleInfo = () => {
           <div className="allMatchesContainer">
             <div className="match">
               <div className="matchInfo">
-                <span>MATCH #1 - Group A</span>
+                <span className="matchGroupSpan">
+                  <p>MATCH #1</p>
+                  <p className="dash">-</p>
+                  <p>Group A</p>
+                </span>
                 <p>Friday, 12 June 2021</p>
                 <p>San Siro, Milano</p>
               </div>
@@ -49,7 +53,11 @@ const ScheduleInfo = () => {
             </div>
             <div className="match">
               <div className="matchInfo">
-                <span>MATCH #2 - Group B</span>
+                <span className="matchGroupSpan">
+                  <p>MATCH #2</p>
+                  <p className="dash">-</p>
+                  <p>Group B</p>
+                </span>
                 <p>Saturday, 13 June 2021</p>
                 <p>Alianz Arena, Munchen</p>
               </div>
@@ -80,8 +88,8 @@ const ScheduleInfo = () => {
           </div>
           <h1>Standings</h1>
           <div className="tableCards">
-            {teams.map(group => (
-              <Paper className="tableCard">
+            {teams.map((group, index) => (
+              <Paper className="tableCard" key={index}>
                 <h2>Group {group.groupName}</h2>
                 <Table>
                   <TableHead>
@@ -107,22 +115,22 @@ const ScheduleInfo = () => {
                     {group.groupTeams.map(
                       ({ flag, nationNick, score }, index) => (
                         <TableRow key={index} className="rowTable">
-                          <TableCell>
+                          <TableCell className="cellTable">
                             <div className="nation">
                               <img src={flag.small} alt={flag.alt} />
                               <p>{nationNick}</p>
                             </div>
                           </TableCell>
-                          <TableCell>
+                          <TableCell className="cellTable">
                             <div className="cell">{score.won}</div>
                           </TableCell>
-                          <TableCell>
+                          <TableCell className="cellTable">
                             <div className="cell">{score.drawn}</div>
                           </TableCell>
-                          <TableCell>
+                          <TableCell className="cellTable">
                             <div className="cell">{score.lost}</div>
                           </TableCell>
-                          <TableCell>
+                          <TableCell className="cellTable">
                             <div className="cell">{score.points}</div>
                           </TableCell>
                         </TableRow>
