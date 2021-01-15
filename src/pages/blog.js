@@ -1,9 +1,11 @@
 import React from "react"
 import HeaderFooterLayout from "../layouts/HeaderFooter"
 import Quote from "../components/Quote/Quote"
+import BlogList from "../components/Blogs/BlogList";
 
 const Blog = () => (
   <HeaderFooterLayout activeTab="Blog">
+    <BlogList />
     <Quote
       quote="What am I to think when the coach has his hands and head up the backside of certain players."
       author="Edgar Davids"
