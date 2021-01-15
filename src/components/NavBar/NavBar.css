@@ -110,3 +110,8 @@
     border: 0;
   }
 }
+@media screen and (max-width: 1000px) {
+  .menuIcon {
+    transform: translate(-50%, 60%);
+  }
+}

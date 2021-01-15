@@ -26,11 +26,12 @@ function Navigation({ activeTab }) {
         {click ? <CloseIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
       </div>
       <li className={click ? "navMenu active" : "navMenu"}>
-        {navs.map(({ tab, to }) => (
+        {navs.map(({ tab, to }, index) => (
           <Link
             to={to}
             className={tab === activeTab ? "navLinks active" : "navLinks"}
             onClick={closeMobileMenu}
+            key={index}
           >
             {tab}
           </Link>
