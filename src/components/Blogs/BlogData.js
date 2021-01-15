@@ -11,7 +11,7 @@ export const blogs = [
       author: "Duje Vidović",
       time: "Thu, 8th January 2021",
       text:
-        "Englandâ€™s Harry Kane has finished as Alipay Top Scorer having struck 12 goals in the European Qualifiers for UEFA EURO 2021.",
+        "England's Harry Kane has finished as Alipay Top Scorer having struck 12 goals in the European Qualifiers for UEFA EURO 2021.",
     },
     {
       title: "Will Portugal be able to defend their title?",
