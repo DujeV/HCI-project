@@ -23,7 +23,7 @@ export const venues = [
       image: "allianz_arena.jpg",
     },
     {
-      name: "Wembley stadium, London, UK",
+      name: "Baku Olympic Stadium, Baku, Azerbaijan",
       capacity: 60000,
       groupsPlaying: "B,C",
       info: "Winner (2016)",

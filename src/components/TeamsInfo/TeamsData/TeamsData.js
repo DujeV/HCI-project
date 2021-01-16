@@ -144,7 +144,7 @@ export const teams = [
         nationNick: "NLD",
         eurosPlayed: 9,
         bestPlace: "Winners (1)",
-        bestPlayer: "Memphis Depay",
+        bestPlayer: "Virgil Van Dijk",
         score: {
           won: 0,
           drawn: 0,
