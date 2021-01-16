@@ -1,0 +1,96 @@
+.mainContainer h3 {
+  font-weight: normal;
+  padding-top: 20px;
+  color: white;
+  text-align: center;
+}
+/*ALL PLAYER CARDS*/
+.playersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10ch;
+  padding-top: 80px;
+}
+/*INDIVIDUAL PLAYER CARD*/
+.player {
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 10px 10px 20px 6px rgba(0, 0, 0, 0.707);
+}
+.playerTumbnail {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px 20px 0 0;
+}
+/*PERSONAL INFO CONTAINER*/
+.personalInfo {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1ch;
+}
+.playerName {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+}
+.personalInfo p {
+  display: flex;
+  gap: 1ch;
+  text-align: center;
+}
+.personalInfo span {
+  font-weight: bold;
+}
+/*STATS CONTAINER*/
+.statsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+}
+.statsTitles {
+  font-weight: bold;
+}
+.statsTitles,
+.statsContent {
+  padding: 0px 20px;
+  width: 250px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.statsTitles p,
+.statsContent p {
+  padding: 15px 0px;
+}
+
+/*MOBILE STYLE*/
+@media screen and (max-width: 550px) {
+  .player {
+    max-width: 400px;
+  }
+  .statsTitles,
+  .statsContent {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .player {
+    max-width: 260px;
+  }
+  .statsTitles,
+  .statsContent {
+    width: 120px;
+  }
+}

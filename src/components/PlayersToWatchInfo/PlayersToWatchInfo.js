@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundGradient from "../BackgroundGradient"
 import Img from "gatsby-image"
+import "./PlayersToWatchInfo.css"
 import { players } from "./PlayersData"
 
 const PlayersToWatchInfo = () => {
