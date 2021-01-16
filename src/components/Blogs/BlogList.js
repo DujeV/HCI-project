@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import BackgroundGradient from "../BackgroundGradient"
 import Img from "gatsby-image"
 import "./BlogList.css"
-import { blogs, tags } from "./BlogData"
+import {tags } from "./Tags"
 
 const BlogList = () => {
   const [filterBlogs, setFilterBlogs] = useState([])
@@ -11,14 +11,20 @@ const BlogList = () => {
 
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: { relativeDirectory: { eq: "blogImages" } }) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid(maxWidth: 1920, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
+      allContentfulBlogPosts {
+        nodes {
+          author
+          createdAt
+          description
+          slug
+          tags
+          title
+          text {
+            raw
+          }
+          blogImage {
+            fluid(maxWidth: 1920, quality: 100) {
+              src
             }
           }
         }
@@ -29,13 +35,14 @@ const BlogList = () => {
   useEffect(() => {
     let results = []
 
-    blogs.map(blog => {
+    data.allContentfulBlogPosts.nodes.map(blog => {
       if (blog.tags.includes(selectedTag)) {
         results.push(blog)
       }
     })
     setFilterBlogs(results)
   }, [selectedTag])
+  
 
   const handleClick = e => {
     setSelectedTag(e.target.innerHTML)
@@ -74,30 +81,17 @@ const BlogList = () => {
         >
           {filterBlogs.map((blog, index) => (
             <div className="blog" key={index}>
-              {data.allFile.edges.map(({ node }) => {
-                if (node.base === blog.image) {
-                  return (
-                    <Img
-                      fluid={node.childImageSharp.fluid}
-                      Tag="section"
-                      className="blogThumbnail"
-                      key={index}
-                    />
-                  )
-                }
-              })}
+              <Img fluid={blog.blogImage.fluid} className="blogThumbnail"/>
               <div className="blogTitle">{blog.title}</div>
               <div className="blogInfo">
-                <p>by {blog.author},</p>
-                <p>{blog.time}</p>
+                <p>by {blog.author}</p>
+                <p>{blog.createdAt}</p>
               </div>
 
-              <p className="blogContent">{blog.text}</p>
+              <p className="blogContent">{blog.description}</p>
               <div className="readMoreButton">
-                <button>
-                  <Link to="/blogPost/" state={{ blog: "jaja" }}>
+                <button>              
                     Read more
-                  </Link>
                 </button>
               </div>
             </div>
