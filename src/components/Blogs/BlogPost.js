@@ -21,7 +21,7 @@ const BlogPost = ({ pageContext }) => {
           </h2>
           {next && (<Link to={`/posts/${next.slug}`}><span>Next</span></Link>)}
         </header>
-        <Img fluid={blogImage.fluid} />
+        <Img fluid={blogImage.fluid} className="blogThumbnail"/>
         <article>
         {renderRichText(text)}
         </article>

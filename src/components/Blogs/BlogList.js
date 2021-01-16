@@ -90,8 +90,11 @@ const BlogList = () => {
 
               <p className="blogContent">{blog.description}</p>
               <div className="readMoreButton">
-                <button>              
+                
+                <button>
+                  <Link to={`/posts/${blog.slug}`}>
                     Read more
+                    </Link>              
                 </button>
               </div>
             </div>
