@@ -12,6 +12,7 @@
   font-size: 3rem;
   letter-spacing: 2pt;
   color: white;
+  text-align: center;
 }
 
 /*ALL CARDS CONTAINER*/
@@ -39,6 +40,7 @@
   background: white;
   border-radius: 20px;
   transition: 0.5s all ease-out;
+  box-shadow: 10px 10px 20px 6px rgba(0, 0, 0, 0.707);
 }
 
 /*FLAG AND NATION NAME*/
@@ -93,6 +95,7 @@
   padding: 5px;
   border-radius: 10px;
   background: #fff;
+  box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.707);
 }
 .selectedDropDown select,
 .searchContainer input {

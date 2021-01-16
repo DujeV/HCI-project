@@ -54,6 +54,7 @@
   gap: 3ch;
   background-color: white;
   border-radius: 30px;
+  box-shadow: 7px 7px 20px 3px rgba(0, 0, 0, 0.707);
 }
 .borderBoxFirst {
   border-right: 2pt solid lightgray;
@@ -94,6 +95,7 @@
 .tableCard {
   padding: 10px 20px;
   border-radius: 20px !important;
+  box-shadow: 10px 10px 20px 6px rgba(0, 0, 0, 0.707) !important;
 }
 .tableCard h2 {
   letter-spacing: 3pt;

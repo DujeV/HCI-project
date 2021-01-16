@@ -5,6 +5,7 @@
   height: 80px;
   font-size: 1.2rem;
   z-index: 1;
+  box-shadow: 0px 10px 25px 3px rgba(0, 0, 0, 0.707);
 }
 
 /*LOGO*/
