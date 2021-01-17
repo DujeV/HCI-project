@@ -80,6 +80,9 @@
   .statsBox {
     width: 250px;
   }
+  .playerTumbnail {
+    height: 300px;
+  }
 }
 @media screen and (max-width: 300px) {
   .statsBox {

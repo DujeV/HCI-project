@@ -83,8 +83,9 @@ const BlogList = () => {
               <Img fluid={blog.blogImage.fluid} className="blogThumbnail" />
               <div className="blogTitle">{blog.title}</div>
               <div className="blogInfo">
-                <p>by {blog.author}</p>
-                <p>{blog.createdAt}</p>
+                <p>
+                  by {blog.author}, {blog.createdAt}
+                </p>
               </div>
 
               <p className="blogContent">{blog.description}</p>

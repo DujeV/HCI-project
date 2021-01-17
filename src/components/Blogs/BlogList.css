@@ -84,6 +84,7 @@
   font-size: 10pt;
   color: rgb(116, 108, 108);
   padding-top: 10px;
+  text-align: center;
 }
 .blogContent {
   height: 250px;
@@ -110,8 +111,18 @@
     grid-template-columns: 1fr;
   }
 }
+@media screen and (max-width: 500px) {
+  .tags {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 @media screen and (max-width: 400px) {
   .tags {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 300px) {
+  .tags {
+    grid-template-columns: 1fr;
   }
 }
