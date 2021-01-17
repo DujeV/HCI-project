@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundGradient from "../BackgroundGradient"
 import Img from "gatsby-image"
 import "./PlayersToWatchInfo.css"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+import { Carousel } from "react-responsive-carousel"
 
 const PlayersToWatchInfo = () => {
   const data = useStaticQuery(graphql`
@@ -32,14 +34,21 @@ const PlayersToWatchInfo = () => {
         <div className="playersContainer">
           {data.allContentfulPlayerToWatch.nodes.map((player, index) => (
             <div className="player" key={index}>
-              {player.photos.map((photo, index) => (
-                <Img
-                  fluid={photo.fluid}
-                  Tag="section"
-                  className="playerTumbnail"
-                  key={index}
-                />
-              ))}
+              <Carousel
+                showThumbs={false}
+                infiniteLoop={true}
+                showStatus={false}
+                autoPlay={true}
+              >
+                {player.photos.map((photo, index) => (
+                  <Img
+                    fluid={photo.fluid}
+                    Tag="section"
+                    className="playerTumbnail"
+                    key={index}
+                  />
+                ))}
+              </Carousel>
               <div className="personalInfo">
                 <span className="playerName">{player.name}</span>
                 <p>
@@ -53,14 +62,16 @@ const PlayersToWatchInfo = () => {
               </div>
 
               <div className="statsContainer">
-                <div className="statsTitles">
-                  <p>Euros record</p>
-                  <p>Matches played</p>
-                  <p>Goals scored</p>
-                </div>
-                <div className="statsContent">
+                <div className="statsBox">
+                  <span>Euros record</span>
                   <p>{player.euroRecord}</p>
+                </div>
+                <div className="statsBox">
+                  <span>Matches played</span>
                   <p>{player.matchesPlayed}</p>
+                </div>
+                <div className="statsBox">
+                  <span>Goals scored</span>
                   <p>{player.goalsScored}</p>
                 </div>
               </div>

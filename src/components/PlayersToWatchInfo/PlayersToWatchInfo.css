@@ -15,10 +15,6 @@
 .player {
   background-color: white;
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   max-width: 500px;
   width: 100%;
   box-shadow: 10px 10px 20px 6px rgba(0, 0, 0, 0.707);
@@ -26,8 +22,8 @@
 .playerTumbnail {
   width: 100%;
   height: 350px;
-  border-radius: 20px 20px 0 0;
 }
+
 /*PERSONAL INFO CONTAINER*/
 .personalInfo {
   padding-top: 30px;
@@ -53,44 +49,40 @@
 /*STATS CONTAINER*/
 .statsContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 20px;
-}
-.statsTitles {
-  font-weight: bold;
-}
-.statsTitles,
-.statsContent {
-  padding: 0px 20px;
-  width: 250px;
-  height: 150px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  gap: 2ch;
+  padding: 40px 20px;
 }
-.statsTitles p,
-.statsContent p {
-  padding: 15px 0px;
+.statsBox {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px;
+}
+.statsBox span {
+  font-weight: bold;
 }
 
 /*MOBILE STYLE*/
-@media screen and (max-width: 550px) {
-  .player {
-    max-width: 400px;
+@media screen and (max-width: 600px) {
+  .statsBox {
+    width: 430px;
   }
-  .statsTitles,
-  .statsContent {
-    width: 150px;
+}
+@media screen and (max-width: 500px) {
+  .statsBox {
+    width: 340px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .statsBox {
+    width: 250px;
   }
 }
 @media screen and (max-width: 300px) {
-  .player {
-    max-width: 260px;
-  }
-  .statsTitles,
-  .statsContent {
-    width: 120px;
+  .statsBox {
+    width: 230px;
   }
 }
