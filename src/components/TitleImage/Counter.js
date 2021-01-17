@@ -11,7 +11,8 @@ const Counter = () => {
   })
 
   useEffect(() => {
-    setInterval(() => updateCountdown(), 1000)
+    const intervalId = setInterval(() => updateCountdown(), 1000)
+    return () => clearInterval(intervalId)
   })
 
   const updateCountdown = () => {
