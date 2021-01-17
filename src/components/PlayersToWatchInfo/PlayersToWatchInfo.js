@@ -3,46 +3,43 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundGradient from "../BackgroundGradient"
 import Img from "gatsby-image"
 import "./PlayersToWatchInfo.css"
-import { players } from "./PlayersData"
 
 const PlayersToWatchInfo = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: { relativeDirectory: { eq: "players" } }) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid(maxWidth: 1920, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
+      allContentfulPlayerToWatch {
+        nodes {
+          age
+          euroRecord
+          goalsScored
+          name
+          nationality
+          matchesPlayed
+          photos {
+            fluid(maxWidth: 1920, quality: 100) {
+              src
             }
           }
         }
       }
     }
   `)
-
   return (
     <BackgroundGradient>
       <div className="mainContainer">
         <h1>Players To Watch</h1>
         <h3>Check out players who can lead their nations to top results.</h3>
         <div className="playersContainer">
-          {players.map((player, index) => (
+          {data.allContentfulPlayerToWatch.nodes.map((player, index) => (
             <div className="player" key={index}>
-              {data.allFile.edges.map(({ node }, index) => {
-                if (node.base === player.image) {
-                  return (
-                    <Img
-                      fluid={node.childImageSharp.fluid}
-                      Tag="section"
-                      className="playerTumbnail"
-                      key={index}
-                    />
-                  )
-                }
-              })}
+              {player.photos.map((photo, index) => (
+                <Img
+                  fluid={photo.fluid}
+                  Tag="section"
+                  className="playerTumbnail"
+                  key={index}
+                />
+              ))}
               <div className="personalInfo">
                 <span className="playerName">{player.name}</span>
                 <p>
