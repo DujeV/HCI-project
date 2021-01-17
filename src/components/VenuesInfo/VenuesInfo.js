@@ -39,6 +39,8 @@ const VenuesInfo = () => {
                       key={index}
                     />
                   )
+                } else {
+                  return null
                 }
               })}
 

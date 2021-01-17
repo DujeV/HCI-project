@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import BackgroundGradient from "../BackgroundGradient"
 import Img from "gatsby-image"
 import "./BlogList.css"
-import {tags } from "./Tags"
+import { tags } from "./Tags"
 
 const BlogList = () => {
   const [filterBlogs, setFilterBlogs] = useState([])
@@ -35,14 +35,13 @@ const BlogList = () => {
   useEffect(() => {
     let results = []
 
-    data.allContentfulBlogPosts.nodes.map(blog => {
+    data.allContentfulBlogPosts.nodes.forEach(blog => {
       if (blog.tags.includes(selectedTag)) {
         results.push(blog)
       }
     })
     setFilterBlogs(results)
   }, [selectedTag])
-  
 
   const handleClick = e => {
     setSelectedTag(e.target.innerHTML)
@@ -81,7 +80,7 @@ const BlogList = () => {
         >
           {filterBlogs.map((blog, index) => (
             <div className="blog" key={index}>
-              <Img fluid={blog.blogImage.fluid} className="blogThumbnail"/>
+              <Img fluid={blog.blogImage.fluid} className="blogThumbnail" />
               <div className="blogTitle">{blog.title}</div>
               <div className="blogInfo">
                 <p>by {blog.author}</p>
@@ -90,12 +89,9 @@ const BlogList = () => {
 
               <p className="blogContent">{blog.description}</p>
               <div className="readMoreButton">
-                
-                <button>
-                  <Link to={`/posts/${blog.slug}`}>
-                    Read more
-                    </Link>              
-                </button>
+                <Link to={`/posts/${blog.slug}`}>
+                  <button>Read more</button>
+                </Link>
               </div>
             </div>
           ))}

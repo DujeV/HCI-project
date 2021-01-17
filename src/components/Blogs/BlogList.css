@@ -89,6 +89,7 @@
   height: 250px;
   width: 100%;
   padding: 20px;
+  line-height: 1.5;
 }
 .readMoreButton {
   padding-bottom: 20px;
