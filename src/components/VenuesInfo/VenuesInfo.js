@@ -13,7 +13,7 @@ const VenuesInfo = () => {
             base
             childImageSharp {
               fluid(maxWidth: 1920, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

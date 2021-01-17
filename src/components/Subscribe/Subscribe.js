@@ -10,7 +10,7 @@ const Subscribe = () => {
       desktop: file(relativePath: { eq: "UefaEuroBackground.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
