@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import "./BlogList.css"
 import { tags } from "./Tags"
 import { myLocalStorage } from "../Login/helper"
+import Moment from "react-moment";
 
 const BlogList = () => {
   const [filterBlogs, setFilterBlogs] = useState([])
@@ -90,7 +91,7 @@ const BlogList = () => {
                   <div className="blogTitle">{blog.title}</div>
                   <div className="blogInfo">
                     <p>
-                      by {blog.author}, {blog.createdAt}
+                      by {blog.author}, <Moment format="Do MMM YYYY">{blog.createdAt}</Moment>
                     </p>
                   </div>
 
