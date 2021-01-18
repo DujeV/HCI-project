@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Modal from "react-modal"
 import { navigate } from "gatsby"
 import { users } from "../../constants/const"
+import { myLocalStorage } from "./helper"
 
 const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
   const [username, setUserName] = useState()
@@ -18,7 +19,7 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
       )
       setLoading(false)
       if (loginSuccessful) {
-        localStorage.setItem("loggedIn", username)
+        myLocalStorage.setItem("loggedIn", username)
         setError("Success")
         UpdatingUser()
         closeModal()

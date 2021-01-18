@@ -4,11 +4,12 @@ import BackgroundGradient from "../BackgroundGradient"
 import Img from "gatsby-image"
 import "./BlogList.css"
 import { tags } from "./Tags"
+import { myLocalStorage } from "../Login/helper"
 
 const BlogList = () => {
   const [filterBlogs, setFilterBlogs] = useState([])
   const [selectedTag, setSelectedTag] = useState("all")
-  const user = localStorage.getItem("loggedIn")
+  const user = myLocalStorage.getItem("loggedIn")
 
   const data = useStaticQuery(graphql`
     {

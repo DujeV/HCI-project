@@ -10,8 +10,10 @@ import LogoSVG from "../../svgs/logo.svg"
 import { navs } from "../../constants/const"
 import Login from "../Login/Login"
 
+import { myLocalStorage } from "../Login/helper"
+
 function Navigation({ activeTab }) {
-  const [user, setUser] = useState(localStorage.getItem("loggedIn"))
+  const [user, setUser] = useState(myLocalStorage.getItem("loggedIn"))
   const [click, setClick] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -21,12 +23,13 @@ function Navigation({ activeTab }) {
   const closeModal = () => setIsModalOpen(false)
 
   const Logout = () => {
-    localStorage.clear()
+    myLocalStorage.removeItem()
     setUser(null)
+    setClick(false)
     return navigate("/")
   }
   const UpdatingUser = () => {
-    setUser(localStorage.getItem("loggedIn"))
+    setUser(myLocalStorage.getItem("loggedIn"))
   }
 
   return (
@@ -77,7 +80,10 @@ function Navigation({ activeTab }) {
         ) : (
           <button
             className="loginButton"
-            onClick={() => setIsModalOpen(!isModalOpen)}
+            onClick={() => {
+              setIsModalOpen(!isModalOpen)
+              setClick(false)
+            }}
           >
             <AccountCircleIcon className="userIcon" />
             <span>Login</span>
