@@ -8,6 +8,7 @@ import { tags } from "./Tags"
 const BlogList = () => {
   const [filterBlogs, setFilterBlogs] = useState([])
   const [selectedTag, setSelectedTag] = useState("all")
+  const [user, setUser] = useState(localStorage.getItem('loggedIn'));
 
   const data = useStaticQuery(graphql`
     {
@@ -50,6 +51,7 @@ const BlogList = () => {
   return (
     <BackgroundGradient>
       <div className="mainContainer">
+        {user ? <>
         <h1 className="pageHeader">Blogs & Latest News</h1>
 
         <div className="tagsContainer">
@@ -96,7 +98,7 @@ const BlogList = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div></> : <h1>Sorry... You have to be logged in to view this page 😜</h1>}
       </div>
     </BackgroundGradient>
   )
