@@ -40,7 +40,7 @@ function Navigation({ activeTab }) {
         {click ? <CloseIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
       </div>
       <li className={click ? "navMenu active" : "navMenu"}>
-        {navs.map(({ tab, to }, index) => (
+      {user ? navs.map(({ tab, to }, index) => (
           <Link
             to={to}
             className={tab === activeTab ? "navLinks active" : "navLinks"}
@@ -49,7 +49,23 @@ function Navigation({ activeTab }) {
           >
             {tab}
           </Link>
-        ))}
+        )) : navs.map(({ tab, to, access }, index) => {
+          if(access==='public')
+          {
+            return(
+
+            
+          <Link
+            to={to}
+            className={tab === activeTab ? "navLinks active" : "navLinks"}
+            onClick={closeMobileMenu}
+            key={index}
+          >
+            {tab}
+          </Link>
+            )
+          }
+})}
          {
           user ?
         <button className="loginButton" onClick={Logout} >
