@@ -13,22 +13,32 @@ const BlogPost = ({ pageContext }) => {
   return (
     <HeaderFooterLayout>
       <BackgroundGradient>
-        <main className="mainContainer">
-          <header className={!prev || !next ? "headerTwo" : ""}>
-            {prev && (
-              <Link to={`/posts/${prev.slug}`}>
-                <span>Previous</span>
-              </Link>
-            )}
-            <h2>{title}</h2>
-            {next && (
+        <main className="blogPostContainer">
+          {next && !prev ? (
+            <div className="onlyNext">
               <Link to={`/posts/${next.slug}`}>
-                <span>Next</span>
+                <button className="singleTag arrowWidth">Next</button>
               </Link>
-            )}
-          </header>
-          <Img fluid={blogImage.fluid} className="blogThumbnail" />
-          <article>{renderRichText(text)}</article>
+            </div>
+          ) : (
+            <div className="arrowContainer">
+              {prev && (
+                <Link to={`/posts/${prev.slug}`}>
+                  <button className="singleTag arrowWidth">Previous</button>
+                </Link>
+              )}
+              {next && (
+                <Link to={`/posts/${next.slug}`}>
+                  <button className="singleTag arrowWidth">Next</button>
+                </Link>
+              )}
+            </div>
+          )}
+          <div className="blogPost">
+            <header>{title}</header>
+            <Img fluid={blogImage.fluid} className="blogPostThumbnail" />
+            <article>{renderRichText(text)}</article>
+          </div>
         </main>
       </BackgroundGradient>
     </HeaderFooterLayout>

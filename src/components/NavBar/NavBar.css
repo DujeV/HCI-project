@@ -16,6 +16,9 @@
   align-items: center;
   cursor: pointer;
 }
+.logoContainer h4 {
+  font-size: 1.17rem;
+}
 /*BURGER MENU ICON*/
 .menuIcon {
   display: none;

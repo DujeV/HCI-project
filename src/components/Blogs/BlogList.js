@@ -8,7 +8,7 @@ import { tags } from "./Tags"
 const BlogList = () => {
   const [filterBlogs, setFilterBlogs] = useState([])
   const [selectedTag, setSelectedTag] = useState("all")
-  const [user, setUser] = useState(localStorage.getItem('loggedIn'));
+  const user = localStorage.getItem("loggedIn")
 
   const data = useStaticQuery(graphql`
     {
@@ -51,54 +51,66 @@ const BlogList = () => {
   return (
     <BackgroundGradient>
       <div className="mainContainer">
-        {user ? <>
-        <h1 className="pageHeader">Blogs & Latest News</h1>
+        {user ? (
+          <>
+            <h1 className="pageHeader">Blogs & Latest News</h1>
 
-        <div className="tagsContainer">
-          <p>Filter blog posts with tags</p>
-          <div className="tags">
-            {tags.map((tag, index) => (
-              <button
-                className={
-                  selectedTag === tag.name ? "singleTag activeTag" : "singleTag"
-                }
-                key={index}
-                onClick={handleClick}
-              >
-                {tag.name}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div
-          className={
-            filterBlogs.length > 2
-              ? "blogsContainer moreActive"
-              : filterBlogs.length === 1
-              ? "blogsContainer oneActive"
-              : "blogsContainer twoActive"
-          }
-        >
-          {filterBlogs.map((blog, index) => (
-            <div className="blog" key={index}>
-              <Img fluid={blog.blogImage.fluid} className="blogThumbnail" />
-              <div className="blogTitle">{blog.title}</div>
-              <div className="blogInfo">
-                <p>
-                  by {blog.author}, {blog.createdAt}
-                </p>
-              </div>
-
-              <p className="blogContent">{blog.description}</p>
-              <div className="readMoreButton">
-                <Link to={`/posts/${blog.slug}`}>
-                  <button>Read more</button>
-                </Link>
+            <div className="tagsContainer">
+              <p>Filter blog posts with tags</p>
+              <div className="tags">
+                {tags.map((tag, index) => (
+                  <button
+                    className={
+                      selectedTag === tag.name
+                        ? "singleTag activeTag"
+                        : "singleTag"
+                    }
+                    key={index}
+                    onClick={handleClick}
+                  >
+                    {tag.name}
+                  </button>
+                ))}
               </div>
             </div>
-          ))}
-        </div></> : <h1>Sorry... You have to be logged in to view this page 😜</h1>}
+
+            <div
+              className={
+                filterBlogs.length > 2
+                  ? "blogsContainer moreActive"
+                  : filterBlogs.length === 1
+                  ? "blogsContainer oneActive"
+                  : "blogsContainer twoActive"
+              }
+            >
+              {filterBlogs.map((blog, index) => (
+                <div className="blog" key={index}>
+                  <Img fluid={blog.blogImage.fluid} className="blogThumbnail" />
+                  <div className="blogTitle">{blog.title}</div>
+                  <div className="blogInfo">
+                    <p>
+                      by {blog.author}, {blog.createdAt}
+                    </p>
+                  </div>
+
+                  <p className="blogContent">{blog.description}</p>
+                  <div className="readMoreButton">
+                    <Link to={`/posts/${blog.slug}`}>
+                      <button>Read more</button>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : (
+          <h1>
+            Sorry... You have to be logged in to view this page{" "}
+            <span role="img" aria-label="emoji">
+              😜
+            </span>
+          </h1>
+        )}
       </div>
     </BackgroundGradient>
   )
