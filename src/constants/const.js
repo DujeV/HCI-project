@@ -24,3 +24,16 @@ export const navs = [
     to: "/blog",
   },
 ]
+
+
+export const users = [
+  {
+    username: "toni",
+    password: "123"
+  },
+  {
+    username: "duje",
+    password: "123"
+  },
+  
+]
