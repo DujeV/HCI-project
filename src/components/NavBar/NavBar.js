@@ -50,10 +50,21 @@ function Navigation({ activeTab }) {
             {tab}
           </Link>
         ))}
+         {
+          user ?
+        <button className="loginButton" onClick={Logout} >
+          <AccountCircleIcon className="userIcon" />
+          <span>Logout</span>
+          
+        </button>
+        :
         <button className="loginButton" onClick={() => setIsModalOpen(!isModalOpen)}>
           <AccountCircleIcon className="userIcon" />
-          <span>Log In</span>
+          <span>Login</span>
+          
         </button>
+        
+        }
         <Login isModalOpen={isModalOpen} closeModal={closeModal} UpdatingUser={UpdatingUser}/>
       </li>
     </div>
