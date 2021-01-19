@@ -1,0 +1,126 @@
+.wrapper {
+  width: 260px;
+  height: 380px;
+
+  border-radius: 15px;
+}
+.wrapper .loginTitle {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+}
+.wrapper form {
+  padding: 10px 30px 50px 30px;
+}
+.wrapper form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+
+  transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid {
+  border-color: #4158d0;
+}
+.wrapper form .field label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label {
+  top: 0%;
+  font-size: 16px;
+  background: #007b8d;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+form .field input[type="submit"] {
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #007b8d;
+  transition: all 0.3s ease;
+}
+form .field input[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+form .signup-link {
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .signup-link a {
+  color: #4158d0;
+  text-decoration: none;
+}
+
+form .signup-link a:hover {
+  text-decoration: underline;
+}
+.error {
+  opacity: 0;
+  padding-top: 20px;
+  text-align: center;
+  color: red;
+  margin: 20px auto;
+  margin-top: 0;
+}
+
+.success {
+  opacity: 0;
+  text-align: center;
+  padding-top: 20px;
+  color: blue;
+  margin: 20px auto;
+  margin-top: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+.signInModal {
+  position: absolute !important;
+  top: -20% !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(50%);
+}
+
+@media screen and (max-width: 500px) {
+  .signInModal {
+    width: 250px !important;
+
+    position: absolute !important;
+    top: -10% !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(50%);
+  }
+}

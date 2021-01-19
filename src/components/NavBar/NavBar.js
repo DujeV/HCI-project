@@ -23,7 +23,7 @@ function Navigation({ activeTab }) {
   const closeModal = () => setIsModalOpen(false)
 
   const Logout = () => {
-    myLocalStorage.removeItem()
+    myLocalStorage.removeItem('loggedIn')
     setUser(null)
     setClick(false)
     return navigate("/")

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Modal from "react-modal"
+import "./Login.css"
 import { navigate } from "gatsby"
 import { users } from "../../constants/const"
 import { myLocalStorage } from "./helper"
@@ -10,12 +11,16 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
+  const defaultError = () => {
+    setError(false);
+  }
+
   const submit = () => {
     setError(false)
     setLoading(true)
     setTimeout(() => {
-      const loginSuccessful = !!users.find(
-        user => user.username === username && user.password === password
+      const loginSuccessful = users.find(
+        user => (user.username === username && user.password === password)
       )
       setLoading(false)
       if (loginSuccessful) {
@@ -32,27 +37,51 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
   return (
     <Modal
       isOpen={isModalOpen}
+      onAfterOpen={defaultError}
       onRequestClose={closeModal}
+      className="signInModal"
       ariaHideApp={false}
       style={{
         content: {
-          margin: "auto",
+         
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          
           background: "#fff",
-          width: "300px",
-          height: "300px",
+          width: "400px",
+          height: "550px",
           WebkitOverflowScrolling: "touch",
-          borderRadius: "4px",
-          boxShadow: '0px 15px 20px rgba(0, 0, 0, 0.1)',
+          borderRadius: "20px",
           outline: "none",
+          boxShadow: '0px 15px 20px rgba(0, 0, 0, 0.1)'
         },
+        
+
       }}
       shouldCloseOnEsc={true}
     >
-      <div className="wrapper">
+      {/* <section className="loginContainer">
+        <section className="field">
+          <label htmlFor="username">Username</label>
+          <input name="username" onChange={e => setUserName(e.target.value)} />
+        </section>
+        <section className="field">
+          <label htmlFor="password">Password</label>
+          <input
+            name="password"
+            type="password"
+            onChange={e => setPassword(e.target.value)}
+          />
+        </section>
+
+        <button className="loginButton" onClick={() => submit()}>
+          {loading ? "Loading..." : "Login"}
+        </button>
+      </section> */}
+  
+
+  
+    <div className="wrapper">
       <div className="loginTitle">
 Login Form</div>
 <form action="#">
@@ -66,11 +95,11 @@ Login Form</div>
         </div>
 
 <div className="field">
-          {/* <input type="submit" value="Login" onClick={() => submit()}/> */}
+          <input type="submit" value="Login" onClick={() => submit()}/>
 
-          <button  type="submit" className="loginButton" onClick={() => submit()}>
+          {/* <button  type="submit" className="loginButton" onClick={() => submit()}>
           {loading ? "Loading..." : "Login"}
-        </button>
+        </button> */}
         </div>
         <div className="signup-link">
 Don't have an account? <a href="#">Please signup</a>
