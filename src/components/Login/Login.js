@@ -66,7 +66,7 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
               required
               onChange={e => setUserName(e.target.value)}
             />
-            <label>Username</label>
+            <label htmlFor="username">Username</label>
           </div>
           <div className="field">
             <input
@@ -74,7 +74,7 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
               required
               onChange={e => setPassword(e.target.value)}
             />
-            <label>Password</label>
+            <label htmlFor="password">Password</label>
           </div>
 
           <div className="loginButtonField">
@@ -87,7 +87,7 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
             </button>
           </div>
           <div className="signup-link">
-            Don't have an account? <a href="#">Please signup</a>
+            Don't have an account? <a href="/">Please signup</a>
           </div>
           <p
             className={`${error !== "Success" ? "error" : "success"} ${

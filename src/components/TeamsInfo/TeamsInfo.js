@@ -81,33 +81,40 @@ const TeamsInfo = () => {
             ></input>
           </div>
         </div>
-
-        <div
-          className={data.length <= 1 ? "cards activeOne" : "cards activeMore"}
-        >
-          {data.map(
-            ({ flag, nation, eurosPlayed, bestPlace, bestPlayer }, index) => (
-              <div className="card" key={index}>
-                <div className="nationContainer">
-                  <img src={flag.big} alt={flag.alt} />
-                  <p>{nation}</p>
-                </div>
-                <div className="infoContainer">
-                  <div className="infoTitles">
-                    <p>Euros played</p>
-                    <p>Best place</p>
-                    <p>Best player</p>
+        {data.length != 0 ? (
+          <div
+            className={
+              data.length <= 1 ? "cards activeOne" : "cards activeMore"
+            }
+          >
+            {data.map(
+              ({ flag, nation, eurosPlayed, bestPlace, bestPlayer }, index) => (
+                <div className="card" key={index}>
+                  <div className="nationContainer">
+                    <img src={flag.big} alt={flag.alt} />
+                    <p>{nation}</p>
                   </div>
-                  <div className="infoContent">
-                    <p>{eurosPlayed}</p>
-                    <p>{bestPlace}</p>
-                    <p>{bestPlayer}</p>
+                  <div className="infoContainer">
+                    <div className="infoTitles">
+                      <p>Euros played</p>
+                      <p>Best place</p>
+                      <p>Best player</p>
+                    </div>
+                    <div className="infoContent">
+                      <p>{eurosPlayed}</p>
+                      <p>{bestPlace}</p>
+                      <p>{bestPlayer}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )
-          )}
-        </div>
+              )
+            )}
+          </div>
+        ) : (
+          <div className="noSearchResult">
+            There are no teams for this search input.
+          </div>
+        )}
       </div>
     </BackgroundGradient>
   )
