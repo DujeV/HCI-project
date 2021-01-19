@@ -40,35 +40,46 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          border: "1px solid #ccc",
+          
           background: "#fff",
           width: "300px",
           height: "300px",
           WebkitOverflowScrolling: "touch",
           borderRadius: "4px",
+          boxShadow: '0px 15px 20px rgba(0, 0, 0, 0.1)',
           outline: "none",
         },
       }}
       shouldCloseOnEsc={true}
     >
-      <section className="container">
-        <section className="field">
-          <label htmlFor="username">Username</label>
-          <input name="username" onChange={e => setUserName(e.target.value)} />
-        </section>
-        <section className="field">
-          <label htmlFor="password">Password</label>
-          <input
-            name="password"
-            type="password"
-            onChange={e => setPassword(e.target.value)}
-          />
-        </section>
+      <div className="wrapper">
+      <div className="loginTitle">
+Login Form</div>
+<form action="#">
+        <div className="field">
+          <input type="text" required onChange={e => setUserName(e.target.value)} />
+          <label>Username</label>
+        </div>
+<div className="field">
+          <input type="password" required  onChange={e => setPassword(e.target.value)}/>
+          <label>Password</label>
+        </div>
 
-        <button className="loginButton" onClick={() => submit()}>
+<div className="field">
+          {/* <input type="submit" value="Login" onClick={() => submit()}/> */}
+
+          <button  type="submit" className="loginButton" onClick={() => submit()}>
           {loading ? "Loading..." : "Login"}
         </button>
-      </section>
+        </div>
+        <div className="signup-link">
+Don't have an account? <a href="#">Please signup</a>
+
+</div>
+<p className={`${error !== "Success" ? 'error' : 'success'} ${error ? 'show': ''}`}>{error}</p>
+</form>
+</div>
+
     </Modal>
   )
 }
