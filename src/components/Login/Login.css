@@ -113,6 +113,16 @@
   left: 50% !important;
   transform: translateX(-50%) translateY(50%);
 }
+.loginButtonField {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.large {
+  height: 40px;
+  width: 120px;
+}
 
 @media screen and (max-width: 500px) {
   .signInModal {

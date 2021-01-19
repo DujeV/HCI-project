@@ -87,10 +87,12 @@
   align-items: center;
   gap: 2ch;
   font-weight: bold;
+  font-family: "Quicksand", sans-serif;
 }
 .cell {
   display: flex;
   justify-content: center;
+  font-family: "Quicksand", sans-serif;
 }
 .tableCard {
   padding: 10px 20px;

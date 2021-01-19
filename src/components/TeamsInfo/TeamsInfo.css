@@ -14,7 +14,9 @@
   color: white;
   text-align: center;
 }
-
+input {
+  font-family: "Quicksand", sans-serif;
+}
 /*ALL CARDS CONTAINER*/
 .cards {
   padding-top: 80px;

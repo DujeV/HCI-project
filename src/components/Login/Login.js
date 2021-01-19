@@ -12,7 +12,7 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
   const [loading, setLoading] = useState(false)
 
   const defaultError = () => {
-    setError(false);
+    setError(false)
   }
 
   const submit = () => {
@@ -20,7 +20,7 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
     setLoading(true)
     setTimeout(() => {
       const loginSuccessful = users.find(
-        user => (user.username === username && user.password === password)
+        user => user.username === username && user.password === password
       )
       setLoading(false)
       if (loginSuccessful) {
@@ -43,7 +43,6 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
       ariaHideApp={false}
       style={{
         content: {
-         
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -53,62 +52,52 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
           WebkitOverflowScrolling: "touch",
           borderRadius: "20px",
           outline: "none",
-          boxShadow: '0px 15px 20px rgba(0, 0, 0, 0.1)'
+          boxShadow: "0px 15px 20px rgba(0, 0, 0, 0.1)",
         },
-        
-
       }}
       shouldCloseOnEsc={true}
     >
-      {/* <section className="loginContainer">
-        <section className="field">
-          <label htmlFor="username">Username</label>
-          <input name="username" onChange={e => setUserName(e.target.value)} />
-        </section>
-        <section className="field">
-          <label htmlFor="password">Password</label>
-          <input
-            name="password"
-            type="password"
-            onChange={e => setPassword(e.target.value)}
-          />
-        </section>
+      <div className="wrapper">
+        <div className="loginTitle">Login Form</div>
+        <div className="form">
+          <div className="field">
+            <input
+              type="text"
+              required
+              onChange={e => setUserName(e.target.value)}
+            />
+            <label>Username</label>
+          </div>
+          <div className="field">
+            <input
+              type="password"
+              required
+              onChange={e => setPassword(e.target.value)}
+            />
+            <label>Password</label>
+          </div>
 
-        <button className="loginButton" onClick={() => submit()}>
-          {loading ? "Loading..." : "Login"}
-        </button>
-      </section> */}
-  
-
-  
-    <div className="wrapper">
-      <div className="loginTitle">
-Login Form</div>
-<div className="form">
-        <div className="field">
-          <input type="text" required onChange={e => setUserName(e.target.value)} />
-          <label>Username</label>
+          <div className="loginButtonField">
+            <button
+              type="submit"
+              className="loginButton large"
+              onClick={() => submit()}
+            >
+              {loading ? "Loading..." : "Login"}
+            </button>
+          </div>
+          <div className="signup-link">
+            Don't have an account? <a href="#">Please signup</a>
+          </div>
+          <p
+            className={`${error !== "Success" ? "error" : "success"} ${
+              error ? "show" : ""
+            }`}
+          >
+            {error}
+          </p>
         </div>
-<div className="field">
-          <input type="password" required  onChange={e => setPassword(e.target.value)}/>
-          <label>Password</label>
-        </div>
-
-<div className="field">
-          <input type="submit" value="Login" onClick={() => submit()}/>
-
-          {/* <button  type="submit" className="loginButton" onClick={() => submit()}>
-          {loading ? "Loading..." : "Login"}
-        </button> */}
-        </div>
-        <div className="signup-link">
-Don't have an account? <a href="#">Please signup</a>
-
-</div>
-<p className={`${error !== "Success" ? 'error' : 'success'} ${error ? 'show': ''}`}>{error}</p>
-</div>
-</div>
-
+      </div>
     </Modal>
   )
 }

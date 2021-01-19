@@ -8,7 +8,7 @@ const SubscribeInput = () => {
       </div>
       <div className="roundedFields">
         <div className="newsletterInput">
-          <input type="email" placeholder="Please enter your email." />
+          <input type="email" placeholder="example@gmail.com" />
         </div>
         <button>SUBSCRIBE</button>
       </div>
