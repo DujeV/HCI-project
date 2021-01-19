@@ -87,7 +87,9 @@ const BlogList = () => {
             >
               {filterBlogs.map((blog, index) => (
                 <div className="blog" key={index}>
+                  <div className="blogZoomIn">
                   <Img fluid={blog.blogImage.fluid} className="blogThumbnail" />
+                  </div>
                   <div className="blogTitle">{blog.title}</div>
                   <div className="blogInfo">
                     <p>
