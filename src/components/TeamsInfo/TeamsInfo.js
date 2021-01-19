@@ -81,7 +81,7 @@ const TeamsInfo = () => {
             ></input>
           </div>
         </div>
-        {data.length != 0 ? (
+        {data.length !== 0 ? (
           <div
             className={
               data.length <= 1 ? "cards activeOne" : "cards activeMore"
