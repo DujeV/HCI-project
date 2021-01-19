@@ -245,7 +245,7 @@ export const teams = [
         nation: "Austria",
         nationNick: "AUS",
         eurosPlayed: 2,
-        bestPlace: "Group Stage",
+        bestPlace: "Group Stage (1)",
         bestPlayer: "David Alaba",
         score: {
           won: 0,

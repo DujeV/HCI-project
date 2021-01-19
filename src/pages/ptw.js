@@ -7,7 +7,7 @@ const PlayersToWatch = () => (
   <HeaderFooterLayout activeTab="PTW">
     <PlayersToWatchInfo />
     <Quote
-      quote="What am I to think when the coach has his hands and head up the backside of certain players."
+      quote="“When I walk around people salute me and now I must be the only person allowed to drive in the bus lanes.”"
       author="Otto Rehhagel"
       description="discusses the perks of helping the Greeks pull off one of the biggest shocks in world football at Euro ’04."
     />
