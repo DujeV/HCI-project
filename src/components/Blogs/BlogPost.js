@@ -2,6 +2,7 @@ import React from "react"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+import {Helmet} from "react-helmet"
 
 import "./BlogPost.css"
 import HeaderFooterLayout from "../../layouts/HeaderFooter"
@@ -12,6 +13,10 @@ const BlogPost = ({ pageContext }) => {
 
   return (
     <HeaderFooterLayout>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <BackgroundGradient>
         <main className="blogPostContainer">
           {next && !prev ? (
