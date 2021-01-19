@@ -84,7 +84,7 @@ const Login = ({ isModalOpen, closeModal, UpdatingUser }) => {
     <div className="wrapper">
       <div className="loginTitle">
 Login Form</div>
-<form action="#">
+<div className="form">
         <div className="field">
           <input type="text" required onChange={e => setUserName(e.target.value)} />
           <label>Username</label>
@@ -106,7 +106,7 @@ Don't have an account? <a href="#">Please signup</a>
 
 </div>
 <p className={`${error !== "Success" ? 'error' : 'success'} ${error ? 'show': ''}`}>{error}</p>
-</form>
+</div>
 </div>
 
     </Modal>
