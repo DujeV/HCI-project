@@ -32,15 +32,12 @@ const VenuesInfo = () => {
               {data.allFile.edges.map(({ node }, index) => {
                 if (node.base === venue.image) {
                   return (
-                  <div className="zoomInContainer">
-
                     <Img
                       fluid={node.childImageSharp.fluid}
                       Tag="section"
                       className="venueTumbnail"
                       key={index}
                     />
-                  </div>
                   )
                 } else {
                   return null

@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import "./BlogList.css"
 import { tags } from "./Tags"
 import { myLocalStorage } from "../Login/helper"
-import Moment from "react-moment";
+import Moment from "react-moment"
 
 const BlogList = () => {
   const [filterBlogs, setFilterBlogs] = useState([])
@@ -88,12 +88,20 @@ const BlogList = () => {
               {filterBlogs.map((blog, index) => (
                 <div className="blog" key={index}>
                   <div className="blogZoomIn">
-                  <Img fluid={blog.blogImage.fluid} className="blogThumbnail" />
+                    <Link to={`/posts/${blog.slug}`}>
+                      <Img
+                        fluid={blog.blogImage.fluid}
+                        className="blogThumbnail"
+                      />
+                    </Link>
                   </div>
-                  <div className="blogTitle">{blog.title}</div>
+                  <Link to={`/posts/${blog.slug}`}>
+                    <div className="blogTitle">{blog.title}</div>
+                  </Link>
                   <div className="blogInfo">
                     <p>
-                      by {blog.author}, <Moment format="Do MMM YYYY">{blog.createdAt}</Moment>
+                      by {blog.author},{" "}
+                      <Moment format="Do MMM YYYY">{blog.createdAt}</Moment>
                     </p>
                   </div>
 
