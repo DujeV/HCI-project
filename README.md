@@ -6,6 +6,10 @@ This web application is mockup of the official UEFA EURO 2021 website. It contai
 
 Live DEMO : <a href="https://euro-2021.netlify.app/" target="_blank">[here]</a>
 
+Login info
+Username : duje
+Password: 123
+
 High fidelity prototype : <a href="https://www.figma.com/proto/BrdN3pdWfzQ1wXskoJADhD/EURO?node-id=46%3A3&viewport=1271%2C680%2C0.12047889828681946&scaling=contain" target="_blank">[here]</a> 
 
 <h2>Purpose 🎨 📝</h2>
